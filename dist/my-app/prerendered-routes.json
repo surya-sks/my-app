@@ -1,0 +1,10 @@
+{
+  "routes": [
+    "/",
+    "/complaintStatus",
+    "/employeeManage",
+    "/home",
+    "/managaeAbsence",
+    "/tasks"
+  ]
+}
