@@ -1,0 +1,26 @@
+<div class="card-style">
+    <mat-card class="example-card" appearance="outlined">
+        <!-- <mat-card-header class="card-header">
+          <mat-card-title>Login</mat-card-title>
+        </mat-card-header> -->
+        <mat-card-content>
+            <div class="center-align">
+                <h6>Login</h6>
+            </div>
+            <form class="example-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <mat-form-field class="example-full-width">
+                    <mat-label>User Name</mat-label>
+                    <input matInput formControlName="username">
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Password</mat-label>
+                    <input matInput formControlName="password">
+                  </mat-form-field>
+                  <div class="center-align">
+                  <button mat-flat-button>Submit</button>
+                  </div>
+              </form>
+        </mat-card-content>
+      </mat-card>
+</div>

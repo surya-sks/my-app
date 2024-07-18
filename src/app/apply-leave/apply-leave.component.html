@@ -1,0 +1,48 @@
+<h2 mat-dialog-title>Apply Leave</h2>
+<mat-dialog-content>
+  <form [formGroup]="leaveForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col">
+            <mat-form-field>
+                <mat-label>From Date</mat-label>
+                <input matInput [matDatepicker]="fromDatePicker" formControlName="fromDate" (dateChange)="calculateDuration()">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="fromDatePicker"></mat-datepicker-toggle>
+                <mat-datepicker #fromDatePicker></mat-datepicker>
+              </mat-form-field>          
+      </div>
+      <div class="col">
+            <mat-form-field>
+                <mat-label>To Date</mat-label>
+                <input matInput [matDatepicker]="toDatePicker" formControlName="toDate" (dateChange)="calculateDuration()">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="toDatePicker"></mat-datepicker-toggle>
+                <mat-datepicker #toDatePicker></mat-datepicker>
+              </mat-form-field>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col">
+          <mat-form-field appearance="fill">
+              <mat-label>Duration</mat-label>
+              <input matInput formControlName="duration">
+            </mat-form-field>
+      </div>
+      <div class="col">
+          <mat-form-field appearance="fill">
+              <mat-label>Reason</mat-label>
+              <input matInput formControlName="reason">
+            </mat-form-field>
+      </div>
+  </div>
+  </form>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button mat-dialog-close cdkFocusInitial (click)="onSubmit()">Submit</button>
+</mat-dialog-actions>
+
+
+
+

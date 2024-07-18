@@ -1,0 +1,50 @@
+<div class="sub-header">
+    <h4>Manage Absence</h4>
+</div>
+<!-- <div class="demo-button-containe button-padding">
+    <button mat-raised-button (click)="addData()" class="demo-button">
+      Apply Leave for an Employee
+    </button>
+  </div> -->
+  <div class="table-container">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+        <!-- Employee Number Column -->
+        <ng-container matColumnDef="empNumber">
+            <th mat-header-cell *matHeaderCellDef>Employee Number</th>
+            <td mat-cell *matCellDef="let element">{{element.empNumber}}</td>
+          </ng-container>
+    
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let element">{{element.name}}</td>
+        </ng-container>
+
+        <!-- Leave Balance Column -->
+        <ng-container matColumnDef="leaveBalance">
+            <th mat-header-cell *matHeaderCellDef>Leave Balance</th>
+            <td mat-cell *matCellDef="let element">{{element.leaveBalance}}</td>
+          </ng-container>
+
+        <!-- Action Column -->
+        <ng-container matColumnDef="leaveHistory">
+          <th mat-header-cell *matHeaderCellDef>Leave History</th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-icon-button matTooltip="Click to View Leave History" class="iconbutton"
+              color="primary" (click)="viewLeaveHistory(element)">
+              <mat-icon class="icon-color">visibility</mat-icon>
+            </button> 
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="applyLeave">
+          <th mat-header-cell *matHeaderCellDef>Apply Leave</th>
+          <td mat-cell *matCellDef="let element">
+              <button mat-flat-button (click)="applyLeave(element)">Apply Leave</button>
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+  </div>
+  
+  

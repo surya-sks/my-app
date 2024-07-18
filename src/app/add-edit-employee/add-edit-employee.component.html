@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>Add Employee</h2>
+<mat-dialog-content>
+  <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col">
+          <mat-form-field appearance="fill">
+              <mat-label>Enter Name</mat-label>
+              <input matInput formControlName="name">
+            </mat-form-field>
+      </div>
+      <div class="col">
+          <mat-form-field appearance="fill">
+              <mat-label>Enter Role</mat-label>
+              <input matInput formControlName="role">
+            </mat-form-field>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col">
+          <mat-form-field appearance="fill">
+              <mat-label>Enter Location</mat-label>
+              <input matInput formControlName="location">
+            </mat-form-field>
+      </div>
+      <div class="col">
+          <mat-form-field appearance="fill">
+              <mat-label>Enter Contact Number</mat-label>
+              <input matInput formControlName="contactNumber">
+            </mat-form-field>
+      </div>
+  </div>
+  </form>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button mat-dialog-close cdkFocusInitial (click)="onSubmit()">Submit</button>
+</mat-dialog-actions>
+
+
+
+

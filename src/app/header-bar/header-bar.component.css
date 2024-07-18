@@ -1,0 +1,13 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .toolbar-background{
+    /* background-color: #4245EA;
+    color: white; */
+    background-color: #EAEDED;
+    color: #4245EA;
+    cursor: pointer;
+  }
+  .icon-blue {
+    color: #4245EA;
+  }

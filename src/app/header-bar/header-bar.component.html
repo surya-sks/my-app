@@ -1,0 +1,14 @@
+<mat-toolbar class="toolbar-background">
+    <button mat-icon-button aria-label="Example icon-button with app icon"  routerLink="/home">
+        <mat-icon class="icon-blue">groups</mat-icon>
+    </button>
+    <span>MS</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button aria-label="Example icon-button with user icon">
+        <mat-icon class="icon-blue" [matTooltip]="loggedInUser">account_circle</mat-icon>
+      </button>
+    <button mat-icon-button aria-label="Example icon-button with logout icon">
+      <mat-icon class="icon-blue" matTooltip="Logout" (click)="onLogout()">logout</mat-icon>
+    </button>
+  </mat-toolbar>
+    
