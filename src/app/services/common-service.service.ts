@@ -10,14 +10,14 @@ export class CommonServiceService {
   constructor(private http: HttpClient) { }
   url = 'http://localhost:3000/';
   apiUrl = 'http://localhost:8080/api/';
-  async getAllHousingLocations(): Promise<any[]> {
-    const data = await fetch(this.url + 'locations');
-    return (await data.json()) ?? [];
-  }
-  async getHousingLocationById(id: number): Promise<any | undefined> {
-    const data = await fetch(`${this.url}/${id}`);
-    return (await data.json()) ?? {};
-  }
+  // async getAllHousingLocations(): Promise<any[]> {
+  //   const data = await fetch(this.url + 'locations');
+  //   return (await data.json()) ?? [];
+  // }
+  // async getHousingLocationById(id: number): Promise<any | undefined> {
+  //   const data = await fetch(`${this.url}/${id}`);
+  //   return (await data.json()) ?? {};
+  // }
   async getComplaintStatus(): Promise<any[]> {
     const data = await fetch(this.url + 'complaintStatus');
     return (await data.json()) ?? [];

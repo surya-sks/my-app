@@ -19,19 +19,14 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent {
   name: any;
-  // @ViewChild('sigPad') sigPad:any;
-  // sigPadElement:any;
   context:any;
   isDrawing = false;
   img:any;
   constructor(public commonService : CommonServiceService){}
   ngOnInit(){
-    // this.sigPadElement = this.sigPad.nativeElement;
-    // this.context = this.sigPadElement.getContext('2d');
-    // this.context.strokeStyle = '#3742fa';
-    this.commonService.getAllHousingLocations().then((housingLocationList: any[]) => {
-      console.log('111 housingLocationList',housingLocationList);
-    });
+    // this.commonService.getAllHousingLocations().then((housingLocationList: any[]) => {
+    //   console.log('111 housingLocationList',housingLocationList);
+    // });
   }
   tiles: any[] = [
     {text: 'Employee Manage', cols: 1, rows: 1, routerLink: '/employeeManage', icon: 'task'},
