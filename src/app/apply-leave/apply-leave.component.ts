@@ -46,9 +46,9 @@ export class ApplyLeaveComponent {
     let toDate = new Date(this.leaveForm.controls['toDate'].value ? this.leaveForm.controls['toDate'].value : '');
     this.leaveForm.get('toDate')?.setValue(new Date(toDate.getFullYear(), toDate.getMonth(), toDate.getDate(), toDate.getHours(), toDate.getMinutes() - toDate.getTimezoneOffset()).toISOString());
     //end
-      this.commonService.saveEmpAbsenceHistory(this.leaveForm.getRawValue()).then((data: any) => {
+      // this.commonService.saveEmpAbsenceHistory(this.leaveForm.getRawValue()).then((data: any) => {
         
-      });
+      // });
   }
   calculateDuration(){
     if(this.leaveForm.controls['fromDate'].value && this.leaveForm.controls['toDate'].value){

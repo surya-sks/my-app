@@ -30,10 +30,9 @@ export class EmployeeManageComponent {
   
   constructor(public commonService : CommonServiceService){}
   ngOnInit(){
-    this.commonService.getEmployeeManage().then((employeeManage: any[]) => {
-      console.log('111 employeeManage',employeeManage);
-      this.dataSource = employeeManage;
-    });
+    // this.commonService.getEmployeeManage().then((employeeManage: any[]) => {
+    //   this.dataSource = employeeManage;
+    // });
   }
   
   addData() {
@@ -43,18 +42,15 @@ export class EmployeeManageComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       this.ngOnInit();
-      // if (result !== undefined) {
-      //   // this.animal.set(result);
-      // }
     });
   }
 
   delete(empNumber: any){
-    this.commonService.deleteEmployeeDetails(empNumber).then((data: any) => {
-      if(data){
-        this.ngOnInit();
-      }
-    });
+    // this.commonService.deleteEmployeeDetails(empNumber).then((data: any) => {
+    //   if(data){
+    //     this.ngOnInit();
+    //   }
+    // });
   }
   edit(empDetails: any){
     const dialogRef = this.dialog.open(AddEditEmployeeComponent, {
@@ -62,10 +58,7 @@ export class EmployeeManageComponent {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('111 result',result);
-      // if (result !== undefined) {
         this.ngOnInit();
-      // }
     });
   }
 }

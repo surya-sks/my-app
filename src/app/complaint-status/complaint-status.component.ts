@@ -19,10 +19,9 @@ export class ComplaintStatusComponent {
   
   constructor(public commonService : CommonServiceService){}
   ngOnInit(){
-    this.commonService.getComplaintStatus().then((complaintStatus: any[]) => {
-      console.log('111 complaintStatus',complaintStatus);
-      this.dataSource = complaintStatus;
-    });
+    // this.commonService.getComplaintStatus().then((complaintStatus: any[]) => {
+    //   this.dataSource = complaintStatus;
+    // });
   }
   addData() {
     // const randomElementIndex = Math.floor(Math.random() * ELEMENT_DATA.length);

@@ -30,10 +30,9 @@ export class ManageAbsenceComponent {
   // @ViewChild(MatTable) table: MatTable<any> | undefined;
   constructor(public commonService : CommonServiceService){}
   ngOnInit(){
-    this.commonService.getManageAbsence().then((manageAbsence: any[]) => {
-      console.log('111 manageAbsence',manageAbsence);
-      this.dataSource = manageAbsence;
-    });
+    // this.commonService.getManageAbsence().then((manageAbsence: any[]) => {
+    //   this.dataSource = manageAbsence;
+    // });
   }
   applyLeave(emp: any){
     const dialogRef = this.dialog.open(ApplyLeaveComponent, {
@@ -45,15 +44,15 @@ export class ManageAbsenceComponent {
     });
   }
   viewLeaveHistory(emp: any){
-    this.commonService.getEmpAbsenceHistoryById(emp?.empNumber).subscribe((data: any) => {
-      const dialogRef = this.dialog.open(LeaveHistoryComponent, {
-        data: {dataSource: data},
-      });
+    // this.commonService.getEmpAbsenceHistoryById(emp?.empNumber).subscribe((data: any) => {
+    //   const dialogRef = this.dialog.open(LeaveHistoryComponent, {
+    //     data: {dataSource: data},
+    //   });
   
-      dialogRef.afterClosed().subscribe(result => {
-        this.ngOnInit();
-      });
-    });
+    //   dialogRef.afterClosed().subscribe(result => {
+    //     this.ngOnInit();
+    //   });
+    // });
    
   }
 }

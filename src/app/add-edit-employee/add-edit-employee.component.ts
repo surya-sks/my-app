@@ -39,20 +39,13 @@ export class AddEditEmployeeComponent {
     contactNumber: new FormControl(''),
   });
   onSubmit() {
-    // TODO: Use EventEmitter with form value
-    if(this.data?.isEdit){
-     this.commonService.updateEmployeeDetails(this.data?.dataSource?.empNumber, this.employeeForm.value).then((data: any) => {
-      // if(data){
-      //   this.ngOnInit();
-      // }
-    });
-    }
-    else{
-      this.commonService.saveEmployeeDetails(this.employeeForm.value).then((data: any) => {
-        // if(data){
-        //   this.ngOnInit();
-        // }
-      });
-    }
+    // if(this.data?.isEdit){
+    //  this.commonService.updateEmployeeDetails(this.data?.dataSource?.empNumber, this.employeeForm.value).then((data: any) => {
+    // });
+    // }
+    // else{
+    //   this.commonService.saveEmployeeDetails(this.employeeForm.value).then((data: any) => {
+    //   });
+    // }
   }
 }
