@@ -17,10 +17,8 @@ export class AppComponent {
   constructor(public commonService : CommonServiceService, private router: Router, private route: ActivatedRoute){
   }
   ngOnInit(){
-    console.log('1111 a[pppppp');
     this.commonService.loggedInUser.subscribe(loggedInUser =>{
       this.loggedInUser = loggedInUser;
-      console.log('111 loggedInUser apppp',loggedInUser);
       if(!this.loggedInUser){
         this.router.navigate([``], { relativeTo: this.route });
       }
