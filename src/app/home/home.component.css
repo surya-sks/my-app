@@ -2,35 +2,27 @@
   font-size: 200px;
   height: 200px;
   width: 200px;
-  color: white;
+  color: white; 
 }
-  /* .home-container{
-    background-color: #EAEDED;
-    height: 227px;
-  } */
   .home-content-container{
-    background-color: #4245EA;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
     color: white;
-    /* cursor: pointer; */
     height: 250px;
-    /* padding: 5px; */
   }
-
-  .card-md {
-    max-width: 200px;
-    min-width: 200px;
-    background-color: #4245EA;
-    color: white;
-    cursor: pointer;
+  .grid-content {
+    width: 200px;
+    height: 80px;
+    margin: 0;
+    border: 1px solid rgb(241,228,234);
+    padding: 5px;
     text-align: center;
-  }
-  /* mat-grid-tile {
-    background: #EAEDED;
-  } */
-  canvas {
-    border: 1px solid #000;
-  }
-  span {
-    width: 300px;
-  }
-  
+    align-content: center;
+    cursor: pointer;
+}
+.gradient-color {
+  background: linear-gradient(red, blue);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

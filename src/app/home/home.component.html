@@ -1,36 +1,3 @@
-<!-- <input type="file"> -->
-
-<!-- <input type="file" class="file-input"
-        #fileUpload>
-
-<div class="file-upload">
-
-   {{"No file uploaded yet."}}
-
-    <button mat-mini-fab color="primary" class="upload-btn"
-      (click)="fileUpload.click()">
-        <mat-icon>attach_file</mat-icon>
-
-    </button>
-
-</div> -->
-
-<!-- <div class="progress"> -->
-
-  <!-- <mat-progress-bar class="progress-bar" mode="determinate"> -->
-
-  <!-- </mat-progress-bar> -->
-  <!-- <canvas #sigPad width="300" height="150" (mousedown)="onMouseDown($event)"
-  (mousemove)="onMouseMove($event)"></canvas> -->
-  <!-- <mat-icon class="cancel-upload" >delete_forever</mat-icon> -->
-
-<!-- </div> -->
-
-
-
-
-
-
 <mat-grid-list cols="4" class="home-content-container">
   @for (tile of homeContent; track homeContent) {
     <mat-grid-tile
@@ -42,11 +9,7 @@
         <!-- </button> -->
       </div>
       <div *ngIf="!tile?.isImage">
-       <div>
         <h3>{{tile.header}}</h3>
-        </div>
-        <div>
-         <!-- {{tile.content}} -->
          A management portal serves as a centralized platform that allows organizations to efficiently oversee and control various aspects of their operations. Here are key components and functionalities typically found in a management portal:
 
          Dashboard Overview: The portal usually opens with a dashboard providing an at-a-glance summary of critical metrics and key performance indicators (KPIs). This allows managers to quickly assess the overall health and status of different departments or projects.
@@ -55,45 +18,22 @@
          
          Project and Task Management: Integrated tools for project and task management enable teams to plan, track progress, allocate resources, and collaborate effectively. Managers can view timelines, milestones, and dependencies to ensure projects stay on track.
          
-         <!-- Resource Allocation: The portal provides insights into resource allocation, including human resources, finances, equipment, and materials. This helps optimize resource utilization and prevent bottlenecks. -->
-         
-         <!-- Reporting and Analytics: Robust reporting capabilities allow managers to generate customized reports and analyze trends over time. This data-driven approach helps in making informed decisions and forecasting future needs.
-         
-         Communication and Collaboration: Features such as messaging systems, discussion boards, and document sharing facilitate seamless communication and collaboration among team members, regardless of their physical location.
-         
-         Performance Evaluation: Performance management tools enable managers to set goals, conduct performance reviews, provide feedback, and track individual or team achievements. This fosters accountability and motivates employees.
-         
-         Workflow Automation: Automation of routine tasks and workflows reduces manual effort, minimizes errors, and increases operational efficiency. Managers can configure workflows based on predefined rules and triggers.
-         
-         Compliance and Governance: Ensure adherence to regulatory requirements and internal policies through compliance monitoring and audit trails within the portal. This enhances transparency and accountability across the organization.
-         
-         Integration Capabilities: Integration with other business systems (such as CRM, ERP, HRIS) allows seamless data flow and a holistic view of organizational operations. This integration enhances the functionality and value of the management portal.
-         
-         Scalability and Customization: Scalable architecture and customization options cater to the unique needs and growth stages of different organizations. Managers can tailor the portal to fit specific workflows and business processes.
-         
-         Security Features: Robust security measures, including encryption, authentication protocols, and regular audits, safeguard sensitive data and protect against cyber threats. This ensures data integrity and confidentiality. -->
-         
          In summary, a management portal serves as a vital tool for organizations to streamline operations, enhance productivity, foster collaboration, and make informed decisions based on real-time data and analytics. Its comprehensive features empower managers to effectively lead their teams and achieve strategic objectives.
-         </div>
         </div>
       
     </mat-grid-tile>
   }
 </mat-grid-list>
-<div  class="home-container">
-  <mat-grid-list cols="6" rowHeight="100px">
-    @for (tile of tiles; track tile) {
+
+<mat-grid-list cols="6" rowHeight="100px">
+  @for (tile of tiles; track tile) {
       <mat-grid-tile
-        [colspan]="tile.cols"
-        [rowspan]="tile.rows" 
-        [routerLink]="tile.routerLink">
-        <mat-card class="card-md" appearance="outlined">
-          <mat-card-content>
-            {{tile.text}}
-          </mat-card-content>
-        </mat-card>
-        <!-- <mat-divider [vertical]="true" style="height: 200px;"></mat-divider> -->
-      </mat-grid-tile>
-    }
-  </mat-grid-list>
-</div>
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows" 
+      [routerLink]="tile.routerLink">
+      <div class="grid-content">
+        <span class="gradient-color">{{tile.text}}</span>
+      </div>
+    </mat-grid-tile>
+  }
+</mat-grid-list>

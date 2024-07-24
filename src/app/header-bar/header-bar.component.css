@@ -1,13 +1,14 @@
-.example-spacer {
+.header-spacer {
     flex: 1 1 auto;
   }
   .toolbar-background{
-    /* background-color: #4245EA;
-    color: white; */
-    background-color: #EAEDED;
-    color: #4245EA;
+    background: rgb(241,228,234);
+    background: radial-gradient(circle, rgba(241,228,234,1) 0%, rgba(217,218,219,1) 100%);
     cursor: pointer;
   }
-  .icon-blue {
-    color: #4245EA;
+  .gradient-color {
+    background: linear-gradient(red, blue);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
   }

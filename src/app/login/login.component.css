@@ -1,21 +1,21 @@
-.example-card {
+.login-card {
     max-width: 400px;
   }
  .card-style{
     padding: 150px 500px;
-    background-color: #4245EA;
-    height: 589px;
+    height: 641px;
+    background-image: url('/black_bg.jfif');
+    background-size: cover;
  }
  .center-align{
     text-align: center;
  }
- .example-form {
+ .login-form {
     min-width: 150px;
     max-width: 500px;
     width: 100%;
   }
   
-  .example-full-width {
+  .login-full-width {
     width: 100%;
   }
-  

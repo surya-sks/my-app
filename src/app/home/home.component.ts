@@ -32,7 +32,7 @@ export class HomeComponent {
     {text: 'Employee Manage', cols: 1, rows: 1, routerLink: '/employeeManage', icon: 'task'},
     {text: 'Manage Absence', cols: 1, rows: 1, routerLink: '/managaeAbsence', icon: 'task'},
     {text: 'Tasks', cols: 1, rows: 1, routerLink: '/tasks', icon: 'task',isDivider: true},
-    {text: 'Total Items', cols: 1, rows: 1, routerLink: '/', icon: 'task'},
+    {text: 'Items', cols: 1, rows: 1, routerLink: '/items', icon: 'task'},
     {text: 'Items Sold', cols: 1, rows: 1, routerLink: '/', icon: 'task'},
     {text: 'Ramaining Items', cols: 1, rows: 1, routerLink: '/', icon: 'task'},
     {text: 'Complaints Status', cols: 1, rows: 1, routerLink: '/complaintStatus', icon: 'task'},

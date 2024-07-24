@@ -6,9 +6,11 @@ import {MatAccordion, MatExpansionModule} from '@angular/material/expansion';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input'
+import { items } from '../models/common-models';
+import { MatTableModule } from '@angular/material/table';
 
 @Component({
-  selector: 'app-tasks',
+  selector: 'app-items',
   standalone: true,
   providers: [provideNativeDateAdapter()],
   imports: [MatButtonModule,
@@ -16,13 +18,20 @@ import {MatInputModule} from '@angular/material/input'
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    MatDatepickerModule],
-  templateUrl: './tasks.component.html',
-  styleUrl: './tasks.component.css'
+    MatDatepickerModule,
+    MatTableModule],
+  templateUrl: './items.component.html',
+  styleUrl: './items.component.css'
 })
-export class TasksComponent {
+export class ItemsComponent {
   accordion = viewChild.required(MatAccordion);
-  submitTask(){
+  totalItemsDisplayedColumns: string[] = ['itemName', 'amount', 'quantity', 'date'];
+  totalItemsDataSource: items[] = [];
+  soldItemsDisplayedColumns: string[] = ['itemName', 'amount', 'quantity', 'date'];
+  soldItemsDataSource: items[] = [];
+  remainingItemsDisplayedColumns: string[] = ['itemName', 'amount', 'quantity', 'date'];
+  remainingItemsDataSource: items[] = [];
+  submitItem(){
 
   }
 }

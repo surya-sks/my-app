@@ -5,6 +5,7 @@ import { ManageAbsenceComponent } from './manage-absence/manage-absence.componen
 import { TasksComponent } from './tasks/tasks.component';
 import { ComplaintStatusComponent } from './complaint-status/complaint-status.component';
 import { LoginComponent } from './login/login.component';
+import { ItemsComponent } from './items/items.component';
 
 export const routes: Routes = [
     {
@@ -36,5 +37,10 @@ export const routes: Routes = [
         path: 'complaintStatus',
         component: ComplaintStatusComponent,
         title: 'Complaint Status',
+      },
+      {
+        path: 'items',
+        component: ItemsComponent,
+        title: 'Items',
       }
 ];

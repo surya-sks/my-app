@@ -1,1 +1,79 @@
-<p>tasks works!</p>
+<div class="sub-header">
+    <h4>Tasks</h4>
+</div>
+<div class="tasks-action-buttons">
+    <button mat-button (click)="accordion().openAll()">Expand All</button>
+    <button mat-button (click)="accordion().closeAll()">Collapse All</button>
+  </div>
+<div class="accordion-padding">
+  <mat-accordion class="tasks-headers-align" multi>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Add Tasks </mat-panel-title>
+        <mat-panel-description>
+          <mat-icon>add_task</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  
+      <mat-form-field>
+        <mat-label>Task Name</mat-label>
+        <input matInput />
+      </mat-form-field>
+      <button mat-flat-button class="button-right" (click)="submitTask()">
+        Submit
+      </button>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Assign Tasks </mat-panel-title>
+        <mat-panel-description>
+          <!-- Select the Task and Assignee for the date -->
+          <mat-icon>task_alt</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      
+      <mat-form-field>
+        <mat-label>Task</mat-label>
+        <input matInput />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Assignee</mat-label>
+        <input matInput />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Date</mat-label>
+        <input matInput [matDatepicker]="datePicker" (focus)="datePicker.open()" readonly />
+      </mat-form-field>
+      <mat-datepicker #datePicker></mat-datepicker>
+
+      <button mat-flat-button class="button-right" (click)="submitTask()">
+        Submit
+      </button>
+
+    </mat-expansion-panel>
+  
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Review tasks </mat-panel-title>
+        <mat-panel-description>
+          <mat-icon>task</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  
+      <mat-form-field>
+        <mat-label>Date</mat-label>
+        <input matInput [matDatepicker]="picker" (focus)="picker.open()" readonly />
+      </mat-form-field>
+      <mat-datepicker #picker></mat-datepicker>
+      
+      <button mat-flat-button class="button-right" (click)="submitTask()">
+        Submit
+      </button>
+
+    </mat-expansion-panel>
+  </mat-accordion>    
+</div>
+  
+  

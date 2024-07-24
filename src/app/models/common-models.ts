@@ -21,3 +21,10 @@ export interface employeeManage {
     location: string;
     complaintStatus: string;
   }
+
+  export interface items {
+    itemName: string;
+    amount: number;
+    quantity: number;
+    date: Date;
+  }

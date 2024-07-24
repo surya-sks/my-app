@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1721723981881,
+  "timestamp": 1721828079706,
   "index": "/my-app/index.csr.html",
   "assetGroups": [
     {
@@ -11,12 +11,11 @@
         "ignoreVary": true
       },
       "urls": [
-        "/my-app/chunk-6WML5GLA.js",
-        "/my-app/chunk-GN3457FX.js",
+        "/my-app/chunk-4IWC6SEI.js",
+        "/my-app/chunk-FP2YO5CY.js",
         "/my-app/favicon.ico",
         "/my-app/index.html",
-        "/my-app/main-LXQ5HGUB.js",
-        "/my-app/manifest.webmanifest",
+        "/my-app/main-MHVJKHUI.js",
         "/my-app/polyfills-6EAL64PA.js",
         "/my-app/scripts-WB34LQOM.js",
         "/my-app/styles-YNTRNN7T.css"
@@ -49,8 +48,8 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/my-app/chunk-6WML5GLA.js": "056ecdec3c0e79b5db3d3535775982b04183dbac",
-    "/my-app/chunk-GN3457FX.js": "9b7fbc31e1136cc49fbdce8943d49f5fe45c56e0",
+    "/my-app/chunk-4IWC6SEI.js": "ba1408a8a6a4ab5811006fda6b01d094897fdc14",
+    "/my-app/chunk-FP2YO5CY.js": "7ae20192aa49a545f3e250598a86ee3c63c4cfa9",
     "/my-app/circle.png": "79f2912c136e57cc71a39293934d626cd781135c",
     "/my-app/ems.png": "50e7581f5e4c8a6d682e5909d54ea9741961bfba",
     "/my-app/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
@@ -63,9 +62,8 @@
     "/my-app/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "/my-app/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/my-app/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/my-app/index.html": "60c73cc345f2d8a66b6fcba0df80faa921fd03a7",
-    "/my-app/main-LXQ5HGUB.js": "af9761a22bb3ce7ea9922b626b191bc4d3abd3cc",
-    "/my-app/manifest.webmanifest": "3281e587021b83e71baffa40c9a493a018f013e3",
+    "/my-app/index.html": "cc28a4c236f9e64d62a47689f071dbe9b1c1414a",
+    "/my-app/main-MHVJKHUI.js": "893e718ddc9d8ab27cf362d45baf019052aa3424",
     "/my-app/polyfills-6EAL64PA.js": "d874147a12a6570d9b44e99935e9de8b7f3cabbc",
     "/my-app/scripts-WB34LQOM.js": "712c822823abf00a602c54311d57726cf57a293c",
     "/my-app/styles-YNTRNN7T.css": "b31f9957a0695bd216dd02f6313fc1725afb5bd4",

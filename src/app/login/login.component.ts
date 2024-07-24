@@ -20,6 +20,9 @@ export class LoginComponent {
     password: new FormControl(''),
     username: new FormControl(''),
   });
+  ngOnInit(){
+    this.commonService.loggedInUser.next('');
+  }
   updateUserName(loggedInUser: any){
     this.commonService.loggedInUser.next(loggedInUser);
   }
