@@ -1,12 +1,10 @@
-<mat-grid-list cols="4" class="home-content-container">
+<mat-grid-list cols="4" class="home-content-container" rowHeight="350px">
   @for (tile of homeContent; track homeContent) {
     <mat-grid-tile
       [colspan]="tile.cols"
       [rowspan]="tile.rows">
       <div *ngIf="tile?.isImage">
-       <!-- <button mat-icon-button aria-label="icon-button with manage icon"> -->
           <mat-icon class="manage-icon">manage_accounts</mat-icon>
-        <!-- </button> -->
       </div>
       <div *ngIf="!tile?.isImage">
         <h3>{{tile.header}}</h3>

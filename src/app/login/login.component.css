@@ -1,21 +1,18 @@
 .login-card {
     max-width: 400px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
  .card-style{
-    padding: 150px 500px;
-    height: 641px;
+    height: 100%;
     background-image: url('/../black_bg.jfif');
-    background-size: cover;
+    background-size: cover; 
  }
- .center-align{
-    text-align: center;
- }
- .login-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
-  }
-  
-  .login-full-width {
+.login-full-width {
     width: 100%;
   }
