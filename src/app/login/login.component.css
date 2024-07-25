@@ -4,7 +4,7 @@
  .card-style{
     padding: 150px 500px;
     height: 641px;
-    background-image: url('/black_bg.jfif');
+    background-image: url('/../black_bg.jfif');
     background-size: cover;
  }
  .center-align{
