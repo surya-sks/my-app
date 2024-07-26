@@ -22,31 +22,50 @@ export class HomeComponent {
   context:any;
   isDrawing = false;
   img:any;
+  colsMenuCount: number = 8;
+  homeContentClass: string = 'col-9';
+  homeIconClass: string = 'col-3';
   constructor(public commonService : CommonServiceService){}
   ngOnInit(){
     // this.commonService.getAllHousingLocations().then((housingLocationList: any[]) => {
     //   console.log('111 housingLocationList',housingLocationList);
     // });
+    this.colsMenuCount = (window.innerWidth <= 800) ? 2 : 8;
+    // this.colsHomeContentCount = (window.innerWidth <= 800) ? 2 : 8;
   }
-  tiles: any[] = [
-    {text: 'Employee Manage', cols: 1, rows: 1, routerLink: '/employeeManage', icon: 'task'},
-    {text: 'Manage Absence', cols: 1, rows: 1, routerLink: '/managaeAbsence', icon: 'task'},
-    {text: 'Tasks', cols: 1, rows: 1, routerLink: '/tasks', icon: 'task',isDivider: true},
+
+  onMenuResize(event: any) {
+    this.colsMenuCount = (event.target.innerWidth <= 800) ? 2 : 8;
+  }
+  onHomeContentResize(event: any) {
+    this.homeContentClass = (event.target.innerWidth <= 800) ? 'row' : 'col-9';
+  }
+
+  onHomeIconResize(event: any) {
+    this.homeIconClass = (event.target.innerWidth <= 800) ? 'row' : 'col-3';
+  }
+
+  menuContent: any[] = [
+    // {text: 'Employee Manage', cols: 1, rows: 1, routerLink: '/employeeManage', icon: 'task'},
+    // {text: 'Manage Absence', cols: 1, rows: 1, routerLink: '/managaeAbsence', icon: 'task'},
+    // {text: 'Tasks', cols: 1, rows: 1, routerLink: '/tasks', icon: 'task',isDivider: true},
+    {text: 'Employee', cols: 1, rows: 1, routerLink: '/employee', icon: 'task'},
     {text: 'Items', cols: 1, rows: 1, routerLink: '/items', icon: 'task'},
-    {text: 'Items Sold', cols: 1, rows: 1, routerLink: '/', icon: 'task'},
-    {text: 'Ramaining Items', cols: 1, rows: 1, routerLink: '/', icon: 'task'},
-    {text: 'Complaints Status', cols: 1, rows: 1, routerLink: '/complaintStatus', icon: 'task'},
-    {text: 'NA', cols: 1, rows: 1, routerLink: '/', icon: 'task'},
-    {text: 'NA', cols: 1, rows: 1, routerLink: '/', icon: 'task',isDivider: true},
-    {text: 'NA', cols: 1, rows: 1, routerLink: '/', icon: 'task'},
-    {text: 'NA', cols: 1, rows: 1, routerLink: '/', icon: 'task'},
-    {text: 'NA', cols: 1, rows: 1, routerLink: '/', icon: 'task'} 
+    // {text: 'Items Sold', cols: 1, rows: 1, routerLink: '/', icon: 'task'},
+    // {text: 'Ramaining Items', cols: 1, rows: 1, routerLink: '/', icon: 'task'},
+    // {text: 'Complaints Status', cols: 1, rows: 1, routerLink: '/complaintStatus', icon: 'task'},
+    // {text: 'NA', cols: 1, rows: 1, routerLink: '/', icon: 'task'},
+    // {text: 'NA', cols: 1, rows: 1, routerLink: '/', icon: 'task',isDivider: true},
+    // {text: 'NA', cols: 1, rows: 1, routerLink: '/', icon: 'task'},
+    // {text: 'NA', cols: 1, rows: 1, routerLink: '/', icon: 'task'},
+    // {text: 'NA', cols: 1, rows: 1, routerLink: '/', icon: 'task'} 
   ];
 
 homeContent: any[] = [
   {header: '', content:'', cols: 1, rows: 1 , isImage:true},
   {header: 'MS', 
-    content:'MS serves as a centralized platform that allows organizations to efficiently oversee and control various aspects of their operations. MS portal serves as a vital tool for organizations to streamline operations, enhance productivity, foster collaboration, and make informed decisions based on real-time data and analytics. Its comprehensive features empower managers to effectively lead their teams and achieve strategic objectives.', cols: 3, rows: 1, isImage:false },
+    content:'MS serves as a centralized platform that allows organizations to efficiently oversee and control various aspects of their operations. MS portal serves as a vital tool for organizations to streamline operations, enhance productivity, foster collaboration, and make informed decisions based on real-time data and analytics. Its comprehensive features empower managers to effectively lead their teams and achieve strategic objectives.', 
+    cols: 3, rows: 1, isImage:false },
 ];
 
 

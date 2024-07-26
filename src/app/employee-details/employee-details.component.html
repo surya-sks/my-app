@@ -1,0 +1,47 @@
+<div class="sub-header">
+    <h4>Employee Details</h4>
+</div>
+<div class="expansion-action-buttons">
+    <button mat-button (click)="accordion().openAll()">Expand All</button>
+    <button mat-button (click)="accordion().closeAll()">Collapse All</button>
+  </div>
+<div class="accordion-padding">
+  <mat-accordion class="expansion-headers-align" multi>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Employee Manage </mat-panel-title>
+        <mat-panel-description>
+          <mat-icon>add_task</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  
+      <app-employee-manage></app-employee-manage>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Manage Absence </mat-panel-title>
+        <mat-panel-description>
+          <mat-icon>task_alt</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      
+      <app-manage-absence></app-manage-absence>
+
+    </mat-expansion-panel>
+  
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Tasks </mat-panel-title>
+        <mat-panel-description>
+          <mat-icon>task</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  
+      <app-tasks></app-tasks>
+
+    </mat-expansion-panel>
+  </mat-accordion>    
+</div>
+  
+  

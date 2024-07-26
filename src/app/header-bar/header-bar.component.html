@@ -1,9 +1,10 @@
-<mat-toolbar class="toolbar-background">
+<div class="bar-background">
+  <mat-toolbar>
     <button mat-icon-button aria-label="Example icon-button with app icon"  routerLink="/home">
         <mat-icon class="gradient-color">groups</mat-icon>
     </button>
     <span class="gradient-color">MS</span>
-    <span class="header-spacer"></span>
+    <span class="bar-spacer"></span>
     <button mat-icon-button aria-label="Example icon-button with user icon">
         <mat-icon class="gradient-color" [matTooltip]="loggedInUser">account_circle</mat-icon>
       </button>
@@ -11,4 +12,5 @@
       <mat-icon class="gradient-color" matTooltip="Logout" (click)="onLogout()">logout</mat-icon>
     </button>
   </mat-toolbar>
+</div>
     

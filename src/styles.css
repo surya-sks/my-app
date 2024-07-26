@@ -2,3 +2,47 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.gradient-color {
+    background: linear-gradient(red, blue);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+.sub-header{
+    background: linear-gradient(red, blue);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px 0px 0px 10px;
+}
+.table-container{
+    padding: 10px;
+}
+.expansion-action-buttons {
+    padding-bottom: 10px;
+}
+  
+.expansion-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.expansion-headers-align .mat-mdc-form-field + .mat-mdc-form-field {
+    margin-left: 8px;
+}
+
+.button-right{
+  float: right;
+}
+.accordion-padding{
+  padding : 0px 10px 0px 10px;
+}
+.bar-background mat-toolbar{
+    background: rgb(241,228,234) !important;
+    background: radial-gradient(circle, rgba(241,228,234,1) 0%, rgba(217,218,219,1) 100%) !important;
+  }
+.bar-spacer {
+    flex: 1 1 auto;
+  }
+

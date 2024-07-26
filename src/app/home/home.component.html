@@ -1,9 +1,10 @@
-<mat-grid-list cols="4" class="home-content-container" rowHeight="350px">
+<!-- <mat-grid-list  [cols]="colsHomeContentCount" (window:resize)="onHomeContentResize($event)" class="home-content-container">
   @for (tile of homeContent; track homeContent) {
     <mat-grid-tile
       [colspan]="tile.cols"
       [rowspan]="tile.rows">
-      <div *ngIf="tile?.isImage">
+      <div class="home-grid-content">
+        <div *ngIf="tile?.isImage">
           <mat-icon class="manage-icon">manage_accounts</mat-icon>
       </div>
       <div *ngIf="!tile?.isImage">
@@ -18,18 +19,37 @@
          
          In summary, a management portal serves as a vital tool for organizations to streamline operations, enhance productivity, foster collaboration, and make informed decisions based on real-time data and analytics. Its comprehensive features empower managers to effectively lead their teams and achieve strategic objectives.
         </div>
-      
+      </div>
     </mat-grid-tile>
   }
-</mat-grid-list>
+</mat-grid-list> -->
+<div class="home-content-container row  m-auto">
+  <div [class]="homeIconClass" class="manage-icon-center" (window:resize)="onHomeIconResize($event)">
+     <mat-icon class="manage-icon">manage_accounts</mat-icon>
+  </div>
+  <div [class]="homeContentClass"  (window:resize)="onHomeContentResize($event)">
+    <h3>MS</h3>
+    <p>
+    A management portal serves as a centralized platform that allows organizations to efficiently oversee and control various aspects of their operations. Here are key components and functionalities typically found in a management portal:
 
-<mat-grid-list cols="6" rowHeight="100px">
-  @for (tile of tiles; track tile) {
+    Dashboard Overview: The portal usually opens with a dashboard providing an at-a-glance summary of critical metrics and key performance indicators (KPIs). This allows managers to quickly assess the overall health and status of different departments or projects.
+    
+    User Management: Administrators can manage user access and permissions through the portal. This includes adding new users, assigning roles, and revoking access as needed, ensuring security and compliance.
+    
+    Project and Task Management: Integrated tools for project and task management enable teams to plan, track progress, allocate resources, and collaborate effectively. Managers can view timelines, milestones, and dependencies to ensure projects stay on track.
+    
+    In summary, a management portal serves as a vital tool for organizations to streamline operations, enhance productivity, foster collaboration, and make informed decisions based on real-time data and analytics. Its comprehensive features empower managers to effectively lead their teams and achieve strategic objectives.
+  </p>
+  </div>
+</div>
+
+<mat-grid-list [cols]="colsMenuCount" (window:resize)="onMenuResize($event)">
+  @for (tile of menuContent; track tile) {
       <mat-grid-tile
       [colspan]="tile.cols"
       [rowspan]="tile.rows" 
       [routerLink]="tile.routerLink">
-      <div class="grid-content">
+      <div class="menu-grid-content">
         <span class="gradient-color">{{tile.text}}</span>
       </div>
     </mat-grid-tile>

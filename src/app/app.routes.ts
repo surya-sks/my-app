@@ -6,6 +6,7 @@ import { TasksComponent } from './tasks/tasks.component';
 import { ComplaintStatusComponent } from './complaint-status/complaint-status.component';
 import { LoginComponent } from './login/login.component';
 import { ItemsComponent } from './items/items.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 
 export const routes: Routes = [
     {
@@ -42,5 +43,10 @@ export const routes: Routes = [
         path: 'items',
         component: ItemsComponent,
         title: 'Items',
+      },
+      {
+        path: 'employee',
+        component: EmployeeDetailsComponent,
+        title: 'Employee',
       }
 ];

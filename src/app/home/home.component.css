@@ -4,27 +4,26 @@
   width: 200px;
   color: white; 
 }
-  .home-content-container{
+
+.manage-icon-center{
+  align-content: center !important;
+  text-align: center !important;
+}
+.home-content-container{
     background: rgb(63,94,251);
     background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
     color: white;
-  }
-  .grid-content {
-    display: inline;
+    /* padding: 10px; */
+}
+
+.menu-grid-content {
     overflow: hidden;
     word-wrap: break-word;
     height: 80%;
     width: 80%;
-    margin: 0;
     border: 1px solid rgb(241,228,234);
     padding: 5px;
     text-align: center;
     align-content: center;
     cursor: pointer;
-}
-.gradient-color {
-  background: linear-gradient(red, blue);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
