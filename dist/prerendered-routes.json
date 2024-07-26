@@ -2,6 +2,7 @@
   "routes": [
     "/",
     "/complaintStatus",
+    "/employee",
     "/employeeManage",
     "/home",
     "/items",
