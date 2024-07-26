@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1721988401504,
+  "timestamp": 1721990628342,
   "index": "/my-app/index.csr.html",
   "assetGroups": [
     {
@@ -15,7 +15,7 @@
         "/my-app/chunk-WMVE6CZN.js",
         "/my-app/favicon.ico",
         "/my-app/index.html",
-        "/my-app/main-G6HRQQDA.js",
+        "/my-app/main-2FOWIJXO.js",
         "/my-app/polyfills-6EAL64PA.js",
         "/my-app/scripts-WB34LQOM.js",
         "/my-app/styles-73OTB4NG.css"
@@ -38,8 +38,8 @@
     "/my-app/chunk-7UZT5PEI.js": "4b35e08afd04760ed849d3342ffc1dcece448b47",
     "/my-app/chunk-WMVE6CZN.js": "c9797059bfa894571bf442189134d4e356cb177c",
     "/my-app/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
-    "/my-app/index.html": "d542d590231d293a7ea53d54dcf7ceeaf7d9e59d",
-    "/my-app/main-G6HRQQDA.js": "7a736e5bb144192950ea15cb961fcfd1559f5374",
+    "/my-app/index.html": "8317a3a1c07c093227acbacc82597ad4a6c8a2ea",
+    "/my-app/main-2FOWIJXO.js": "bd0e46235e5efafbfb90e776e6d9aee52701b012",
     "/my-app/polyfills-6EAL64PA.js": "d874147a12a6570d9b44e99935e9de8b7f3cabbc",
     "/my-app/scripts-WB34LQOM.js": "712c822823abf00a602c54311d57726cf57a293c",
     "/my-app/styles-73OTB4NG.css": "00c3de15612436ba89062a6f62c3590c7d04cdc3"
