@@ -1,0 +1,36 @@
+<div class="sub-header">
+    <h4>Concepts</h4>
+</div>
+
+<ng-container [ngTemplateOutlet]="ui_expansion_panel" [ngTemplateOutletContext]="{data:items, section: 'initial'}">
+</ng-container>
+
+<ng-template #ui_expansion_panel let-data="data" let-section="section">
+    <!-- <div class="expansion-action-buttons">
+        <button mat-button (click)="accordion().openAll()">Expand All</button>
+        <button mat-button (click)="accordion().closeAll()">Collapse All</button>
+      </div> -->
+      <div class="accordion-padding">
+      <mat-accordion class="expansion-headers-align" multi #accordion>
+        @for (item of data; track item) {
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title> {{ item.title }} </mat-panel-title>
+                </mat-expansion-panel-header>
+                  @if (item.contents) {
+                    <ng-container [ngTemplateOutlet]="ui_expansion_panel" [ngTemplateOutletContext]="{data:item.contents , section:item.title}">
+                    </ng-container>
+                  } @else {
+                    <!-- for splitting content string based on \n we are using css class -->
+                    <div class="contentWithSpace">{{ item.content }}</div>
+                    @if (item.href) {
+                      <div><a [href]="item.href" target="_blank">For more details please click here.</a></div>
+                    }
+                  }
+              </mat-expansion-panel>
+          } @empty {
+            There are no items.
+         }
+      </mat-accordion>
+    </div>
+</ng-template>

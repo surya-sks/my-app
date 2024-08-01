@@ -2,11 +2,13 @@
   "routes": [
     "/",
     "/complaintStatus",
+    "/concepts",
     "/employee",
     "/employeeManage",
     "/home",
     "/items",
     "/managaeAbsence",
-    "/tasks"
+    "/tasks",
+    "/timer"
   ]
 }

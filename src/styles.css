@@ -9,6 +9,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
             background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+.text-gradient-color {
+  /* background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); */
+    background: linear-gradient(to right, rgba(247,5,54,1), rgba(75,63,251,1));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 .sub-header{
     background: linear-gradient(red, blue);
     -webkit-background-clip: text;
@@ -34,6 +41,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .button-right{
   float: right;
+}
+.button-pad{
+  margin: 5px;
 }
 .accordion-padding{
   padding : 0px 10px 0px 10px;

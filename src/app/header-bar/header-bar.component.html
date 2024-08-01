@@ -5,6 +5,7 @@
     </button>
     <span class="gradient-color">MS</span>
     <span class="bar-spacer"></span>
+    <span class="gradient-color">{{ currentTime | date: 'hh:mm:ss a' }}</span>
     <button mat-icon-button aria-label="Example icon-button with user icon">
         <mat-icon class="gradient-color" [matTooltip]="loggedInUser">account_circle</mat-icon>
       </button>

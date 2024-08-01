@@ -10,8 +10,6 @@
   text-align: center !important;
 }
 .home-content-container{
-    /* background: rgb(63,94,251);
-    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); */
     background: rgb(75,63,251);
     background: radial-gradient(circle, rgba(75,63,251,1) 0%, rgba(247,5,54,1) 100%);
     color: white;
@@ -22,9 +20,11 @@
     word-wrap: break-word;
     height: 80%;
     width: 80%;
-    border: 1px solid rgb(241,228,234);
+    border: 1px solid;
     padding: 5px;
     text-align: center;
     align-content: center;
     cursor: pointer;
+    border-image: linear-gradient(to right, rgba(247,5,54,1), rgba(75,63,251,1));
+    border-image-slice: 1; 
 }

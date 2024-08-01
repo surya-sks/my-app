@@ -51,6 +51,8 @@ export class HomeComponent {
     // {text: 'Tasks', cols: 1, rows: 1, routerLink: '/tasks', icon: 'task',isDivider: true},
     {text: 'Employee', cols: 1, rows: 1, routerLink: '/employee', icon: 'task'},
     {text: 'Items', cols: 1, rows: 1, routerLink: '/items', icon: 'task'},
+    {text: 'Concepts', cols: 1, rows: 1, routerLink: '/concepts', icon: 'task'},
+    {text: 'Timer', cols: 1, rows: 1, routerLink: '/timer', icon: 'task'},
     // {text: 'Items Sold', cols: 1, rows: 1, routerLink: '/', icon: 'task'},
     // {text: 'Ramaining Items', cols: 1, rows: 1, routerLink: '/', icon: 'task'},
     // {text: 'Complaints Status', cols: 1, rows: 1, routerLink: '/complaintStatus', icon: 'task'},

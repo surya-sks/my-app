@@ -7,6 +7,8 @@ import { ComplaintStatusComponent } from './complaint-status/complaint-status.co
 import { LoginComponent } from './login/login.component';
 import { ItemsComponent } from './items/items.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { TimerComponent } from './timer/timer.component';
+import { ConceptsComponent } from './concepts/concepts.component';
 
 export const routes: Routes = [
     {
@@ -48,5 +50,15 @@ export const routes: Routes = [
         path: 'employee',
         component: EmployeeDetailsComponent,
         title: 'Employee',
+      },
+      {
+        path: 'concepts',
+        component: ConceptsComponent,
+        title: 'Concepts',
+      },
+      {
+        path: 'timer',
+        component: TimerComponent,
+        title: 'Timer',
       }
 ];
