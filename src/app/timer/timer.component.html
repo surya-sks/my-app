@@ -1,9 +1,55 @@
 <div class="sub-header">
     <h4>Timer</h4>
 </div>
-<div class="timer-container">
-    <h2>{{ formatTime(counter) }}</h2>
-    <button class="button-pad" mat-flat-button (click)="start()">Start</button>
-    <button class="button-pad" mat-flat-button (click)="stop()">Stop</button>
-    <button class="button-pad" mat-flat-button (click)="reset()">Reset</button>
-  </div>
+<mat-grid-list cols="2">
+    @for (tile of menuContent; track tile) {
+        <mat-grid-tile
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows">
+        @if(tile.title == 'Timer'){32
+            <div class="timer-container">
+                <h2>{{ formatTime(counter) }}</h2>
+                <button class="button-pad" mat-flat-button (click)="start()">Start</button>
+                <button class="button-pad" mat-flat-button (click)="stop()">Stop</button>
+                <button class="button-pad" mat-flat-button (click)="reset();playAlarm()">Reset</button>
+                <button class="button-pad" mat-flat-button (click)="reset();stopAlarm()">Snooze</button>
+              </div>
+        }
+        @else {
+            <mat-grid-list cols="2" rowHeight="2:1">
+                <mat-grid-tile>1</mat-grid-tile>
+                <mat-grid-tile>2</mat-grid-tile>
+                <mat-grid-tile>3</mat-grid-tile>
+                <mat-grid-tile>4</mat-grid-tile>
+              </mat-grid-list>
+              
+            <mat-grid-list cols="2">
+                <mat-grid-tile colspan="1" rowspan="1">dsa
+                    <form class="example-form">
+                        <mat-form-field class="example-full-width">
+                          <mat-label>{{tile.title}}</mat-label>
+                          <input type="timer" matInput [formControl]="timerFormControl" placeholder="Set Interval">
+                        </mat-form-field>
+                      </form>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="1" rowspan="1">fd
+                    <div class="timer-container">
+                        <h2>{{ display }}</h2>
+                        <button class="button-pad" mat-flat-button (click)="startCountDown()">Start</button>
+                        <button class="button-pad" mat-flat-button (click)="stopCountDown()">Stop</button>
+                      </div>
+                </mat-grid-tile>
+              </mat-grid-list>
+        }
+      </mat-grid-tile>
+    }
+  </mat-grid-list>
+  
+
+<!-- app.component.html -->
+<!-- <audio #audioPlayer controls>
+    <source src="alarm-clock.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <button (click)="playAudio()">Play</button>
+  <button (click)="pauseAudio()">Pause</button> -->

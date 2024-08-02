@@ -119,8 +119,25 @@ export class ConceptsComponent {
           href: 'https://angular.dev/guide/elements'
          },
          {
-          title:'RxJs Live Timer',
+          title: 'Internationalization',
+          content: '*ng add @angular/localize'
+         }
+      ]
+    },
+    {
+      title: 'RxJS',
+      contents:[
+        {
+          title:'RxJS Live Timer',
           href: 'https://stackblitz.com/edit/angular-fpqxrj?file=src%2Fapp%2Fapp.component.ts'
+         },
+         {
+          title:'RxJS Timer',
+          href: 'https://stackblitz.com/edit/angular-bydxxk?file=src%2Fmain.ts'
+         },
+         {
+          title: 'RxJS CountDown Timer',
+          href: 'https://stackblitz.com/edit/countdown-timer-angular-v2-tdd7eb?file=src%2Fapp%2Fapp.component.html'
          }
       ]
     },
@@ -159,7 +176,6 @@ export class ConceptsComponent {
          }
       ]
     }
-
   ];
 
 }
