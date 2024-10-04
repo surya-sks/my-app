@@ -42,7 +42,7 @@ export class ConceptsComponent {
        (use <project-name> if it is not removed in angular.json-> outputPath) \
        (the above ngh cmd is optional if u want host in gh-pages branch) \
       \nNote : https://www.geeksforgeeks.org/deployment-of-angular-application-using-github-pages/  \
-       (followed this website it suggested entire repo url for abive step 5 instead, i used jut repo name...because while using repo url faced some issues) ',
+       (followed this website it suggested entire repo url for above step 5 instead, i used jut repo name...because while using repo url faced some issues) ',
        href: 'https://www.geeksforgeeks.org/deployment-of-angular-application-using-github-pages/'
     },
     {
