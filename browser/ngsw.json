@@ -1,0 +1,69 @@
+{
+  "configVersion": 1,
+  "timestamp": 1728024855486,
+  "index": "/my-app/index.csr.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/my-app/chunk-PE3NU22P.js",
+        "/my-app/chunk-UPA5UHL4.js",
+        "/my-app/favicon.ico",
+        "/my-app/index.html",
+        "/my-app/main-NIU52AXX.js",
+        "/my-app/polyfills-L6DET5H6.js",
+        "/my-app/scripts-WB34LQOM.js",
+        "/my-app/styles-TBE77LBC.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/my-app/flower.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/my-app/chunk-PE3NU22P.js": "2908e971c2f2df73b2b2a6a53bc385a7ccba9324",
+    "/my-app/chunk-UPA5UHL4.js": "1e39e0296471583f451797dce0e0fefa0e0c6b31",
+    "/my-app/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
+    "/my-app/flower.jpg": "892531adee1be46ad434cee0aaf4fddc00ba924d",
+    "/my-app/index.html": "b603efbea1644d312b657322f957aee59a75d001",
+    "/my-app/main-NIU52AXX.js": "b2a759edbbc36249cb2f849594d4f91461e8df70",
+    "/my-app/polyfills-L6DET5H6.js": "f60a7a99f6d5192fc786ac7973076b197f5023f7",
+    "/my-app/scripts-WB34LQOM.js": "712c822823abf00a602c54311d57726cf57a293c",
+    "/my-app/styles-TBE77LBC.css": "b37e8e553de7b9915b36d09add19a10376ea7e34"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
