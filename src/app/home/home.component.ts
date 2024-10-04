@@ -4,7 +4,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {RouterModule} from '@angular/router';
 import {MatCardModule} from '@angular/material/card';
-import { CommonServiceService } from '../services/common-service.service';
+import { CommonServiceService } from '../services/common.service';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import { CommonModule } from '@angular/common';
@@ -46,21 +46,13 @@ export class HomeComponent {
   }
 
   menuContent: any[] = [
-    // {text: 'Employee Manage', cols: 1, rows: 1, routerLink: '/employeeManage', icon: 'task'},
-    // {text: 'Manage Absence', cols: 1, rows: 1, routerLink: '/managaeAbsence', icon: 'task'},
-    // {text: 'Tasks', cols: 1, rows: 1, routerLink: '/tasks', icon: 'task',isDivider: true},
+    {text: 'Admin', cols: 1, rows: 1, routerLink: '/admin-users', icon: 'task'},
     {text: 'Employee', cols: 1, rows: 1, routerLink: '/employee', icon: 'task'},
-    {text: 'Items', cols: 1, rows: 1, routerLink: '/items', icon: 'task'},
+    {text: 'Items', cols: 1, rows: 1, routerLink: '/items-manage', icon: 'task'},
+    {text: 'Billing', cols: 1, rows: 1, routerLink: '/billing', icon: 'task'},
+    {text: 'Revenue', cols: 1, rows: 1, routerLink: '/revenue', icon: 'task'},
     {text: 'Concepts', cols: 1, rows: 1, routerLink: '/concepts', icon: 'task'},
     {text: 'Timer', cols: 1, rows: 1, routerLink: '/timer', icon: 'task'},
-    // {text: 'Items Sold', cols: 1, rows: 1, routerLink: '/', icon: 'task'},
-    // {text: 'Ramaining Items', cols: 1, rows: 1, routerLink: '/', icon: 'task'},
-    // {text: 'Complaints Status', cols: 1, rows: 1, routerLink: '/complaintStatus', icon: 'task'},
-    // {text: 'NA', cols: 1, rows: 1, routerLink: '/', icon: 'task'},
-    // {text: 'NA', cols: 1, rows: 1, routerLink: '/', icon: 'task',isDivider: true},
-    // {text: 'NA', cols: 1, rows: 1, routerLink: '/', icon: 'task'},
-    // {text: 'NA', cols: 1, rows: 1, routerLink: '/', icon: 'task'},
-    // {text: 'NA', cols: 1, rows: 1, routerLink: '/', icon: 'task'} 
   ];
 
 homeContent: any[] = [

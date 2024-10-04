@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import {MatTable, MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
 import { complaintStatus } from '../models/common-models';
-import { CommonServiceService } from '../services/common-service.service';
+import { CommonServiceService } from '../services/common.service';
 
 @Component({
   selector: 'app-complaint-status',

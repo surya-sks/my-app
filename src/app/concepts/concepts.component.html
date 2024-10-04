@@ -15,14 +15,14 @@
         @for (item of data; track item) {
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
-                  <mat-panel-title> {{ item.title }} </mat-panel-title>
+                  <mat-panel-title i18n> {{ item.title }} </mat-panel-title>
                 </mat-expansion-panel-header>
                   @if (item.contents) {
                     <ng-container [ngTemplateOutlet]="ui_expansion_panel" [ngTemplateOutletContext]="{data:item.contents , section:item.title}">
                     </ng-container>
                   } @else {
                     <!-- for splitting content string based on \n we are using css class -->
-                    <div class="contentWithSpace">{{ item.content }}</div>
+                    <div class="contentWithSpace" i18n>{{ item.content }}</div>
                     @if (item.href) {
                       <div><a [href]="item.href" target="_blank">For more details please click here.</a></div>
                     }

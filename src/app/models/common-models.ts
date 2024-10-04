@@ -23,8 +23,15 @@ export interface employeeManage {
   }
 
   export interface items {
-    itemName: string;
-    amount: number;
-    quantity: number;
-    date: Date;
+    date?: Date;
+    itemName?: string;
+    quantityName?: String;
+    quantity?: number;
+    quantityToKgOrPiece?: number, 
+    buyingAmountForQuantity?: number,
+    totalQuantityInKgOrPiece?: number, 
+    buyingAmountForQuantityInKgOrPiece?: number,
+    totalBuyingAmount?: number,
+    expectedSellingAmount?: number, 
+    expectedSellingAmountForQuantityInKgOrPiece?: number
   }

@@ -3,7 +3,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {ActivatedRoute, Router, RouterModule} from '@angular/router';
-import { CommonServiceService } from '../services/common-service.service';
+import { CommonServiceService } from '../services/common.service';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { Subscription, timer } from "rxjs";
 import { map, share } from "rxjs/operators";

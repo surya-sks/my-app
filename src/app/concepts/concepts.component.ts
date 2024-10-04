@@ -49,6 +49,14 @@ export class ConceptsComponent {
       title: 'Angular',
       contents:[
          {
+          title: 'CLI command for creating \'.ts\' file in angular 6',
+          content: '*ng g c validation --flat=true --inline-style=true --inline-template=true --skip-tests \
+                     \n-\'Flat\' true        - for create file without folder \
+                     \n-\'inline-style\'     - for create or skip the css file \
+                     \n-\'inline-template\'  - for create or skip the html file \
+                     \n-\'skipTests\'        - for create or skip the testing file file'
+         },
+         {
           title: 'ViewEncapsulation',
           content: '*Emulated - By default, Angular uses emulated; This mode ensures that a component\'s styles do not leak out and affect other components. However, global styles defined outside of a component may still affect elements inside a component with emulated encapsulation. \
                    \n*ShadowDom - This mode strictly guarantees that only that component\'s styles apply to elements in the component\'s template. Global styles cannot affect elements in a shadow tree and styles inside the shadow tree cannot affect elements outside of that shadow tree. \
@@ -175,7 +183,53 @@ export class ConceptsComponent {
           content: 'HTML DOM properties are values (of HTML Elements) that you can set or change. A method is an action you can do (like add or deleting an HTML element). Ex: document.getElementById("demo").innerHTML = "Hello World!". In the example above, getElementById is a method, while innerHTML is a property.'
          }
       ]
+    },
+    {
+      title: 'SQL',
+      contents:[
+        {
+          title: 'Remote connection to MySQL',
+          content: '',
+          href: 'https://stackoverflow.com/questions/69824631/mysql-workbench-ssl-connection-error-ssl-is-required-but-the-server-doesnt-sup'
+        },
+         {
+          title: 'How to Add Prefix in Auto Increment in MySQL? Solution 1',
+          content: '',
+          href: 'https://stackoverflow.com/questions/17893988/how-to-make-mysql-table-primary-key-auto-increment-with-some-prefix'
+         },
+         {
+          title: 'How to Add Prefix in Auto Increment in MySQL? Solution 2',
+          content: '',
+          href: 'https://dba.stackexchange.com/questions/322618/how-to-create-an-auto-increment-column-with-a-prefix-in-adminer-with-mysql'
+         },
+         {
+          title: 'How to Add Prefix in Auto Increment in MySQL? Solution 3',
+          content: '',
+          href: 'https://www.geeksforgeeks.org/how-to-add-prefix-in-auto-increment-in-mysql/'
+         }
+      ]
     }
   ];
 
 }
+
+
+
+// INSERT INTO items_vegetable_list (veg_name) 
+// VALUES
+// ('Tomato'),('Big Onion'),('Small Onion'),('Ginger'),('Garlic'),('Potato'),
+// ('Brinjal'),('Lady\'s Finger'),('Carrot'),('Beetroot'),('Radish'),('Green Chilli'),
+// ('Green Peas'),('Beans Green'),('Beans Light Green'),('Ridge Gourd'),('BitterGourd'),
+// ('Bottle Gourd Round'),
+// ('Bottle Gourd Long'),('Cauliflower'),('Cabbage'),('Pumkin'),('Mushroom'),('Corn Packaged'),
+// ('Corn Unpackaged'),('Capsicum'),('Cucumber'),('Curry Leaves'),('Coriander Leaves'),
+// ('Mint Leaves'),('Coconut')
+
+
+
+
+// INSERT INTO items_fruit_list (fru_name) 
+// VALUES
+// ('Apple'),('Orange'),('Mosambi'),('Banana Eelaki'),('Banana Thaen'),('Banana Red'),
+// ('Grapes Black'),('Grapes Green'),('Mango'),('pomegranate'),('Lemon'),('Custard Apple'),('Pineapple'),('Watermelon'),
+// ('Papaya')

@@ -4,7 +4,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormControl, FormGroup, FormsModule ,ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
-import { CommonServiceService } from '../services/common-service.service';
+import { CommonServiceService } from '../services/common.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({

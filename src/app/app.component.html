@@ -1,2 +1,17 @@
+<!-- <app-header-bar *ngIf="loggedInUser"></app-header-bar> -->
+<!-- <router-outlet></router-outlet> -->
 <app-header-bar *ngIf="loggedInUser"></app-header-bar>
-<router-outlet></router-outlet>
+<mat-drawer-container class="drawer-container">
+    <mat-drawer mode="side" opened *ngIf="sideNavList.length" class="drawer">
+        <mat-nav-list>
+            <span *ngFor="let nav of sideNavList">
+                <a mat-list-item [routerLink]="nav.url" class="drawer-nav">
+                    <span>{{nav.name}}</span>
+                  </a>
+            </span>
+          </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet (activate)="changeOfRoutes()"></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

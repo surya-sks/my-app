@@ -1,0 +1,77 @@
+<div class="sub-header">
+    <h4>Items Price List</h4>
+</div>
+<div class="expansion-action-buttons">
+    <button mat-button (click)="accordion().openAll()">Expand All</button>
+    <button mat-button (click)="accordion().closeAll()">Collapse All</button>
+  </div>
+<div class="accordion-padding">
+  <mat-accordion class="expansion-headers-align" multi>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Today's({{todaysDate | date: 'dd/MM/yyyy'}}) price list for items  </mat-panel-title>
+        <mat-panel-description>
+          <!-- <mat-icon>balance</mat-icon> -->
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  
+      <div class="table-container">
+          <table mat-table [dataSource]="todaysPriceListForItemsDataSource" class="mat-elevation-z8 demo-table">
+              <!-- Item Name Column -->
+              <ng-container matColumnDef="itemName">
+                  <th mat-header-cell *matHeaderCellDef>Item Name</th>
+                  <td mat-cell *matCellDef="let element">{{element.itemName}}</td>
+                </ng-container>
+          
+              <!-- Price Column -->
+              <ng-container matColumnDef="price">
+                <th mat-header-cell *matHeaderCellDef>Price per Kg/Piece</th>
+                <td mat-cell *matCellDef="let element">{{element.price}}</td>
+              </ng-container>
+            
+              <tr mat-header-row *matHeaderRowDef="todaysPriceListForItemssDisplayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: todaysPriceListForItemssDisplayedColumns;"></tr>
+          </table>
+        </div>
+
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Past price list for items  </mat-panel-title>
+      <mat-panel-description>
+        <!-- <mat-icon>balance</mat-icon> -->
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <div class="table-container">
+        <table mat-table [dataSource]="pastPriceListForItemsDataSource" class="mat-elevation-z8 demo-table">
+          <!-- Date Column -->
+          <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef>Date</th>
+            <td mat-cell *matCellDef="let element">{{element.date}}</td>
+          </ng-container>
+
+            <!-- Item Name Column -->
+            <ng-container matColumnDef="itemName">
+                <th mat-header-cell *matHeaderCellDef>Item Name</th>
+                <td mat-cell *matCellDef="let element">{{element.itemName}}</td>
+              </ng-container>
+        
+            <!-- Price Column -->
+            <ng-container matColumnDef="price">
+              <th mat-header-cell *matHeaderCellDef>Price per Kg/Piece</th>
+              <td mat-cell *matCellDef="let element">{{element.price}}</td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="pastPriceListForItemssDisplayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: pastPriceListForItemssDisplayedColumns;"></tr>
+        </table>
+      </div>
+
+</mat-expansion-panel>
+
+  </mat-accordion>    
+</div>
+  
+  

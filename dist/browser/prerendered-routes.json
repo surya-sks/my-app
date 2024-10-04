@@ -1,0 +1,23 @@
+{
+  "routes": [
+    "/",
+    "/admin-users",
+    "/bill-generate",
+    "/billing",
+    "/complaintStatus",
+    "/concepts",
+    "/employee",
+    "/employee-absence-manage",
+    "/employee-manage",
+    "/employee-tasks",
+    "/employeeManage",
+    "/home",
+    "/items-home",
+    "/items-manage",
+    "/items-price-list",
+    "/managaeAbsence",
+    "/revenue",
+    "/tasks",
+    "/timer"
+  ]
+}
