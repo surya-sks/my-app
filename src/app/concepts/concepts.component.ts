@@ -218,6 +218,22 @@ export class ConceptsComponent {
           href: ''
         },
       ]
+    },
+    {
+      title: 'Railway.app Deployment',
+      contents:[
+        {
+          title: 'In Java project pom.xml',
+          content: 'In Java project pom.xml file changed java version to 17 instead of actual 22 for deploying in railway.app',
+          href: ''
+        },
+        {
+          title: 'Deployment to railway.app video',
+          content: '',
+          href: 'https://www.youtube.com/watch?v=fllt_qIlEhI'
+          
+        }
+      ]
     }
   ];
 

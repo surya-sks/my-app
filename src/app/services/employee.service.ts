@@ -9,8 +9,11 @@ export class EmployeeService {
   // loggedInUser = new BehaviorSubject('');
   constructor(private http: HttpClient) { }
   url = 'http://localhost:3000/';
-  apiUrl = 'http://localhost:8080/api/';
-  
+  // apiUrl = 'http://localhost:8080/api/';
+
+  //railway.app api url
+  apiUrl = 'https://my-app-apiiiii-production.up.railway.app/api/';
+
   async getEmployeeManage(): Promise<any[]> {
     const data = await fetch(this.apiUrl + 'employees/getAllEmployees');
     return (await data.json()) ?? [];
