@@ -208,6 +208,16 @@ export class ConceptsComponent {
           href: 'https://www.geeksforgeeks.org/how-to-add-prefix-in-auto-increment-in-mysql/'
          }
       ]
+    },
+    {
+      title: 'GIT Command',
+      contents:[
+        {
+          title: 'Remove the .git directory:',
+          content: 'rm -rf .git',
+          href: ''
+        },
+      ]
     }
   ];
 
