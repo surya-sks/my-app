@@ -6,11 +6,13 @@ import {FormControl, FormGroup, FormsModule ,ReactiveFormsModule } from '@angula
 import {MatButtonModule} from '@angular/material/button';
 import { CommonServiceService } from '../services/common.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [MatCardModule,MatInputModule, MatFormFieldModule, FormsModule, MatButtonModule, ReactiveFormsModule],
+  imports: [MatCardModule,MatInputModule, MatFormFieldModule, FormsModule, 
+            MatButtonModule, ReactiveFormsModule, CommonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -20,6 +22,7 @@ export class LoginComponent {
     password: new FormControl(''),
     username: new FormControl(''),
   });
+  isInvalidUser : boolean = false;
   ngOnInit(){
     this.commonService.loggedInUser.next('');
   }
@@ -27,7 +30,20 @@ export class LoginComponent {
     this.commonService.loggedInUser.next(loggedInUser);
   }
   onSubmit(){
-   this.updateUserName(this.loginForm.controls['username'].value);
-   this.router.navigate([`/home`], { relativeTo: this.route });
+    this.commonService.searchUser(this.loginForm.controls['username'].value, this.loginForm.controls['password'].value).subscribe({
+      next: (user => {
+        if(user){
+          this.updateUserName(this.loginForm.controls['username'].value);
+          this.router.navigate([`/home`], { relativeTo: this.route });
+        }
+        else{
+          this.isInvalidUser = true;
+        }
+      }),
+      error: (err => {
+        this.isInvalidUser = true;
+      })
+    });   
+  
   }
 }

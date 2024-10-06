@@ -2,6 +2,8 @@ export interface employeeManage {
     empNumber: string;
     name: string;
     role: string;
+    designation: string;
+    password?: string;
     location: string;
     contactNumber: number;
   }

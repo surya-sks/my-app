@@ -29,6 +29,8 @@ export class AddEditEmployeeComponent {
     if(this.data?.isEdit){
        this.employeeForm?.get('name')?.setValue(this.data?.dataSource?.name);
        this.employeeForm?.get('role')?.setValue(this.data?.dataSource?.role);
+       this.employeeForm?.get('designation')?.setValue(this.data?.dataSource?.designation);
+       this.employeeForm?.get('password')?.setValue(this.data?.dataSource?.password);
        this.employeeForm?.get('location')?.setValue(this.data?.dataSource?.location);
        this.employeeForm?.get('contactNumber')?.setValue(this.data?.dataSource?.contactNumber);
     }
@@ -36,6 +38,8 @@ export class AddEditEmployeeComponent {
   employeeForm = new FormGroup({
     name: new FormControl(''),
     role: new FormControl(''),
+    designation: new FormControl(''),
+    password: new FormControl(''),
     location: new FormControl(''),
     contactNumber: new FormControl(''),
   });

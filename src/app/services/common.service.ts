@@ -84,6 +84,14 @@ adminNavList = [
     }
   }
   
+  searchUser(name: string, password: string): Observable<any> {
+    const params = new HttpParams()
+      .set('name', name)
+      .set('password', password);
+
+    return this.http.get<any>(this.apiUrl + 'employees/searchUser', { params });
+  }
+
   // async getAllHousingLocations(): Promise<any[]> {
   //   const data = await fetch(this.url + 'locations');
   //   return (await data.json()) ?? [];

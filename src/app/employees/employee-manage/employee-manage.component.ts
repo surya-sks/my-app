@@ -24,7 +24,7 @@ import { EmployeeService } from '../../services/employee.service';
   styleUrl: './employee-manage.component.css'
 })
 export class EmployeeManageComponent {
-  displayedColumns: string[] = ['empNumber', 'name', 'role', 'location', 'contactNumber', 'edit', 'delete'];
+  displayedColumns: string[] = ['empNumber', 'name', 'role','designation', 'location', 'contactNumber', 'edit', 'delete'];
   dataSource: employeeManage[] = [];
   dialog = inject(MatDialog);
   // @ViewChild(MatTable) table: MatTable<any> | undefined;
