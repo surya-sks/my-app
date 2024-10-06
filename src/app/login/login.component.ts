@@ -44,6 +44,14 @@ export class LoginComponent {
         this.isInvalidUser = true;
       })
     });   
-  
+  }
+
+  showPwd() {
+    var pwd = document.getElementById("pwd") as HTMLInputElement;
+    if (pwd.type === "password") {
+      pwd.type = "text";
+    } else {
+      pwd.type = "password";
+    }
   }
 }

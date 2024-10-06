@@ -1,1 +1,76 @@
-bill-generate
+<div class="sub-header">
+    <h4>Generate Bill</h4>
+</div>
+<div class="pad-container">
+  <form [formGroup]="itemForm" (change)="itemFormChanged(itemForm)">
+    <mat-form-field>
+      <mat-label>Item Name</mat-label>
+      <mat-select formControlName="itemName" name="item">
+        @for (item of itemsList; track item) {
+          <mat-option [value]="item.itemName">{{item.itemName}}</mat-option>
+        }
+      </mat-select> 
+    </mat-form-field> 
+
+    <mat-form-field>
+      <mat-label>Unit Price</mat-label>
+      <input matInput formControlName="unitPrice"/>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>Qty</mat-label>
+      <input matInput formControlName="qty"/>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Cost</mat-label>
+      <input matInput formControlName="cost"/>
+    </mat-form-field>
+  </form>
+</div>
+<div class="button-container button-padding">
+    <button mat-raised-button (click)="addData()" class="button">
+      Add Item
+    </button>
+    <!-- <button mat-raised-button (click)="addData()" class="button" [disabled]="transactions.length ? false : true"> -->
+      <!-- Generate Bill -->
+      <app-pdf-generator class="button-padding" [headers]="pdfHeaders" [data]="pdfData" [isDisable]="transactions.length ? false : true"></app-pdf-generator>
+    <!-- </button> -->
+</div>
+
+<div class="table-container" *ngIf="transactions.length">
+  <table mat-table [dataSource]="transactions" class="mat-elevation-z8">
+    <!-- Item Column -->
+    <ng-container matColumnDef="itemName">  
+      <th mat-header-cell *matHeaderCellDef> Item </th>
+      <td mat-cell *matCellDef="let transaction"> {{transaction.itemName}} </td>
+      <td mat-footer-cell *matFooterCellDef> Total </td>
+    </ng-container>
+
+    <!-- Unit Price Column -->
+    <ng-container matColumnDef="unitPrice">
+      <th mat-header-cell *matHeaderCellDef> Unit Price </th>
+      <td mat-cell *matCellDef="let transaction"> {{transaction.unitPrice | currency:"INR"}} </td>
+      <td mat-footer-cell *matFooterCellDef>  </td>
+    </ng-container>
+
+    <!-- Quantity Column -->
+    <ng-container matColumnDef="qty">
+      <th mat-header-cell *matHeaderCellDef> Quatity </th>
+      <td mat-cell *matCellDef="let transaction"> {{transaction.qty}} </td>
+      <td mat-footer-cell *matFooterCellDef>  </td>
+    </ng-container>
+  
+    <!-- Cost Column -->
+    <ng-container matColumnDef="cost">
+      <th mat-header-cell *matHeaderCellDef> Cost </th>
+      <td mat-cell *matCellDef="let transaction"> {{transaction.cost | currency:"INR"}} </td>
+      <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency:"INR"}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+  </table>
+  
+</div>

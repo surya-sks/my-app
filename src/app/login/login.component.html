@@ -15,10 +15,12 @@
 
                   <mat-form-field class="login-full-width">
                     <mat-label>Password</mat-label>
-                    <input matInput formControlName="password">
+                    <input matInput formControlName="password" type="password" id="pwd" name="pwd">
                   </mat-form-field>
-                  <div>
-                    <span class="error-msg" *ngIf="isInvalidUser">Please enter valid crendentials.</span>
+                  <div class="align-checkbox">
+                    <!-- An element to toggle between password visibility -->
+                    <input type="checkbox" (click)="showPwd()"><span class="showPwd">Show Password</span>
+                    <p class="error-msg" *ngIf="isInvalidUser">Please enter valid crendentials.</p>
                   </div>
                   <div class="center-align">
                   <button mat-flat-button>Submit</button>

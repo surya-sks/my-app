@@ -46,10 +46,10 @@ export class HomeComponent {
   }
 
   menuContent: any[] = [
-    {text: 'Admin', cols: 1, rows: 1, routerLink: '/admin-users', icon: 'task'},
-    {text: 'Employee', cols: 1, rows: 1, routerLink: '/employee', icon: 'task'},
+    // {text: 'Admin', cols: 1, rows: 1, routerLink: '/admin-users', icon: 'task'},
+    {text: 'Employee', cols: 1, rows: 1, routerLink: '/employee-manage', icon: 'task'},
     {text: 'Items', cols: 1, rows: 1, routerLink: '/items-manage', icon: 'task'},
-    {text: 'Billing', cols: 1, rows: 1, routerLink: '/billing', icon: 'task'},
+    {text: 'Billing', cols: 1, rows: 1, routerLink: '/bill-generate', icon: 'task'},
     {text: 'Revenue', cols: 1, rows: 1, routerLink: '/revenue', icon: 'task'},
     {text: 'Concepts', cols: 1, rows: 1, routerLink: '/concepts', icon: 'task'},
     {text: 'Timer', cols: 1, rows: 1, routerLink: '/timer', icon: 'task'},

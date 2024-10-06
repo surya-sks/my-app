@@ -31,11 +31,11 @@ import { filter } from 'rxjs';
 })
 export class ItemsManageComponent {
   accordion = viewChild.required(MatAccordion);
-  totalItemsDisplayedColumns: string[] = ['date', 'itemName', 'procurementType', 'quantity', 'oneQuantityToKgOrPiece', 'buyingAmountForOneQuantity', 'totalQuantityInKgOrPiece', 'buyingAmountForOneQuantityInKgOrPiece', 'totalBuyingAmount', 'expectedSellingAmount', 'expectedSellingAmountForQuantityInKgOrPiece'];
+  totalItemsDisplayedColumns: string[] = ['date', 'itemName', 'procurementType', 'qty', 'oneQtyToKgOrPiece', 'buyingAmountForOneQty', 'totalQtyInKgOrPiece', 'buyingAmountForOneQtyInKgOrPiece', 'totalBuyingAmount', 'expectedSellingAmount', 'expectedSellingAmountForQtyInKgOrPiece'];
   totalItemsDataSource: any;
-  soldItemsDisplayedColumns: string[] = ['date', 'itemName', 'quantity', 'amount'];
+  soldItemsDisplayedColumns: string[] = ['date', 'itemName', 'qty', 'amount'];
   soldItemsDataSource: items[] = [];
-  remainingItemsDisplayedColumns: string[] = ['itemName', 'quantity'];
+  remainingItemsDisplayedColumns: string[] = ['itemName', 'qty'];
   remainingItemsDataSource: items[] = [];
   todaysDate = new Date();
   itemsList: any;
@@ -67,14 +67,14 @@ export class ItemsManageComponent {
       date: [{value: '', disabled : true}],
       itemName: [{value: '', disabled : false}],
       procurementType: [{value: '', disabled : false}],
-      quantity: [{value: '', disabled : false}],
-      oneQuantityToKgOrPiece: [{value: '', disabled : false}],
-      buyingAmountForOneQuantity: [{value: '', disabled : false}],
-      totalQuantityInKgOrPiece: [{value: '', disabled : true}],
-      buyingAmountForOneQuantityInKgOrPiece: [{value: '', disabled : true}],
+      qty: [{value: '', disabled : false}],
+      oneQtyToKgOrPiece: [{value: '', disabled : false}],
+      buyingAmountForOneQty: [{value: '', disabled : false}],
+      totalQtyInKgOrPiece: [{value: '', disabled : true}],
+      buyingAmountForOneQtyInKgOrPiece: [{value: '', disabled : true}],
       totalBuyingAmount: [{value: '', disabled : true}],
       expectedSellingAmount: [{value: '', disabled : true}],
-      expectedSellingAmountForQuantityInKgOrPiece: [{value: '', disabled : true}],
+      expectedSellingAmountForQtyInKgOrPiece: [{value: '', disabled : true}],
     });  
     this.itemForm.controls['date'].setValue(new Date());
     this.itemsService.getItemsList().then((itemsList: any[]) => {
@@ -85,60 +85,60 @@ export class ItemsManageComponent {
     //     date: '11/09/2024',
     //     itemName: 'tomato',
     //     procurementType: 'grade',
-    //     quantity: 10,
-    //     oneQuantityToKgOrPiece: 24, 
-    //     get totalQuantityInKgOrPiece() {
-    //       return this.quantity * this.oneQuantityToKgOrPiece;
+    //     qty: 10,
+    //     oneQtyToKgOrPiece: 24, 
+    //     get totalQtyInKgOrPiece() {
+    //       return this.qty * this.oneQtyToKgOrPiece;
     //     },
     //     totalBuyingAmount: 5000,
-    //     get buyingAmountForOneQuantity() {
-    //       return Math.ceil(this.totalBuyingAmount / this.totalQuantityInKgOrPiece);
+    //     get buyingAmountForOneQty() {
+    //       return Math.ceil(this.totalBuyingAmount / this.totalQtyInKgOrPiece);
     //     },
     //     get expectedSellingAmount() {
     //       return Math.ceil(this.totalBuyingAmount * (150 / 100));
     //     },
-    //     get expectedSellingAmountForQuantity() {
-    //       return Math.ceil(this.buyingAmountForOneQuantity * (150 / 100));
+    //     get expectedSellingAmountForQty() {
+    //       return Math.ceil(this.buyingAmountForOneQty * (150 / 100));
     //     }
     //   },
     //   {
     //     date: '12/09/2024',
     //     itemName: 'potato',
     //     procurementType: 'sack',
-    //     quantity: 10,
-    //     oneQuantityToKgOrPiece: 20, 
-    //     get totalQuantityInKgOrPiece() {
-    //       return this.quantity * this.oneQuantityToKgOrPiece;
+    //     qty: 10,
+    //     oneQtyToKgOrPiece: 20, 
+    //     get totalQtyInKgOrPiece() {
+    //       return this.qty * this.oneQtyToKgOrPiece;
     //     },
     //     totalBuyingAmount: 6000,
-    //     get buyingAmountForOneQuantity() {
-    //       return Math.ceil(this.totalBuyingAmount / this.totalQuantityInKgOrPiece);
+    //     get buyingAmountForOneQty() {
+    //       return Math.ceil(this.totalBuyingAmount / this.totalQtyInKgOrPiece);
     //     },
     //     get expectedSellingAmount() {
     //       return Math.ceil(this.totalBuyingAmount * (150 / 100));
     //     },
-    //     get expectedSellingAmountForQuantity() {
-    //       return Math.ceil(this.buyingAmountForOneQuantity * (150 / 100));
+    //     get expectedSellingAmountForQty() {
+    //       return Math.ceil(this.buyingAmountForOneQty * (150 / 100));
     //     }
     //   },
     //   {
     //     date: '13/09/2024',
     //     itemName: 'cauliflower',
     //     procurementType: 'sack',
-    //     quantity: 20,
-    //     oneQuantityToKgOrPiece: 20, 
-    //     get totalQuantityInKgOrPiece() {
-    //       return this.quantity * this.oneQuantityToKgOrPiece;
+    //     qty: 20,
+    //     oneQtyToKgOrPiece: 20, 
+    //     get totalQtyInKgOrPiece() {
+    //       return this.qty * this.oneQtyToKgOrPiece;
     //     },
     //     totalBuyingAmount: 8000,
-    //     get buyingAmountForOneQuantity() {
-    //       return Math.ceil(this.totalBuyingAmount / this.totalQuantityInKgOrPiece);
+    //     get buyingAmountForOneQty() {
+    //       return Math.ceil(this.totalBuyingAmount / this.totalQtyInKgOrPiece);
     //     },
     //     get expectedSellingAmount() {
     //       return Math.ceil(this.totalBuyingAmount * (150 / 100));
     //     },
-    //     get expectedSellingAmountForQuantity() {
-    //       return Math.ceil(this.buyingAmountForOneQuantity * (150 / 100));
+    //     get expectedSellingAmountForQty() {
+    //       return Math.ceil(this.buyingAmountForOneQty * (150 / 100));
     //     }
     //   }
     // ];
@@ -150,30 +150,29 @@ export class ItemsManageComponent {
   }
 
   itemFormChanged(form: any){
-    console.log('itemFormChanged');
-  this.itemForm.get("quantity").valueChanges.subscribe(() => {
-    if(this.itemForm.get("oneQuantityToKgOrPiece").value){
-      let totalQuantityInKgOrPiece = Math.ceil(this.itemForm.get("quantity").value * this.itemForm.get("oneQuantityToKgOrPiece").value);
-      this.itemForm.controls['totalQuantityInKgOrPiece'].setValue(totalQuantityInKgOrPiece);
+  this.itemForm.get("qty").valueChanges.subscribe(() => {
+    if(this.itemForm.get("oneQtyToKgOrPiece").value){
+      let totalQtyInKgOrPiece = Math.ceil(this.itemForm.get("qty").value * this.itemForm.get("oneQtyToKgOrPiece").value);
+      this.itemForm.controls['totalQtyInKgOrPiece'].setValue(totalQtyInKgOrPiece);
     }  
   });
-  this.itemForm.get("oneQuantityToKgOrPiece").valueChanges.subscribe(() => {
-    if(this.itemForm.get("quantity").value){
-      let totalQuantityInKgOrPiece = Math.ceil(this.itemForm.get("quantity").value * this.itemForm.get("oneQuantityToKgOrPiece").value);
-      this.itemForm.controls['totalQuantityInKgOrPiece'].setValue(totalQuantityInKgOrPiece);
+  this.itemForm.get("oneQtyToKgOrPiece").valueChanges.subscribe(() => {
+    if(this.itemForm.get("qty").value){
+      let totalQtyInKgOrPiece = Math.ceil(this.itemForm.get("qty").value * this.itemForm.get("oneQtyToKgOrPiece").value);
+      this.itemForm.controls['totalQtyInKgOrPiece'].setValue(totalQtyInKgOrPiece);
     }          
   });
-  this.itemForm.get("buyingAmountForOneQuantity").valueChanges.subscribe(() => {
-    if(this.itemForm.get("quantity").value && this.itemForm.get("oneQuantityToKgOrPiece").value){
-      let totalBuyingAmount = Math.ceil(this.itemForm.get("quantity").value * this.itemForm.get("buyingAmountForOneQuantity").value);
-      let buyingAmountForOneQuantityInKgOrPiece = Math.ceil(totalBuyingAmount / this.itemForm.get("totalQuantityInKgOrPiece").value);
+  this.itemForm.get("buyingAmountForOneQty").valueChanges.subscribe(() => {
+    if(this.itemForm.get("qty").value && this.itemForm.get("oneQtyToKgOrPiece").value){
+      let totalBuyingAmount = Math.ceil(this.itemForm.get("qty").value * this.itemForm.get("buyingAmountForOneQty").value);
+      let buyingAmountForOneQtyInKgOrPiece = Math.ceil(totalBuyingAmount / this.itemForm.get("totalQtyInKgOrPiece").value);
       let expectedSellingAmount = Math.ceil(totalBuyingAmount * (140/100));
-      let  expectedSellingAmountForQuantityInKgOrPiece = Math.ceil(buyingAmountForOneQuantityInKgOrPiece * (140/100));
+      let  expectedSellingAmountForQtyInKgOrPiece = Math.ceil(buyingAmountForOneQtyInKgOrPiece * (140/100));
 
       this.itemForm.controls['totalBuyingAmount'].setValue(totalBuyingAmount);
-      this.itemForm.controls['buyingAmountForOneQuantityInKgOrPiece'].setValue(buyingAmountForOneQuantityInKgOrPiece);
+      this.itemForm.controls['buyingAmountForOneQtyInKgOrPiece'].setValue(buyingAmountForOneQtyInKgOrPiece);
       this.itemForm.controls['expectedSellingAmount'].setValue(expectedSellingAmount);
-      this.itemForm.controls['expectedSellingAmountForQuantityInKgOrPiece'].setValue(expectedSellingAmountForQuantityInKgOrPiece);
+      this.itemForm.controls['expectedSellingAmountForQtyInKgOrPiece'].setValue(expectedSellingAmountForQtyInKgOrPiece);
     }   
   });
   }

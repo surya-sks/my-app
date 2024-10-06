@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1728205830385,
+  "timestamp": 1728241000134,
   "index": "/my-app/index.csr.html",
   "assetGroups": [
     {
@@ -11,14 +11,20 @@
         "ignoreVary": true
       },
       "urls": [
-        "/my-app/chunk-PE3NU22P.js",
-        "/my-app/chunk-UPA5UHL4.js",
+        "/my-app/chunk-GZQYQ32Y.js",
+        "/my-app/chunk-JCJIXIGU.js",
+        "/my-app/chunk-K7HSCCCA.js",
+        "/my-app/chunk-KFFK6TCG.js",
+        "/my-app/chunk-KPN76AHS.js",
+        "/my-app/chunk-ODN5LVDJ.js",
+        "/my-app/chunk-RECFE55V.js",
+        "/my-app/chunk-WRXNKQBO.js",
         "/my-app/favicon.ico",
         "/my-app/index.html",
-        "/my-app/main-UJGKG66L.js",
-        "/my-app/polyfills-L6DET5H6.js",
+        "/my-app/main-LAPG4GKK.js",
+        "/my-app/polyfills-RLN3BNOD.js",
         "/my-app/scripts-WB34LQOM.js",
-        "/my-app/styles-FC22YVH7.css"
+        "/my-app/styles-QSVNA3Q6.css"
       ],
       "patterns": []
     },
@@ -37,15 +43,21 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/my-app/chunk-PE3NU22P.js": "2908e971c2f2df73b2b2a6a53bc385a7ccba9324",
-    "/my-app/chunk-UPA5UHL4.js": "1e39e0296471583f451797dce0e0fefa0e0c6b31",
+    "/my-app/chunk-GZQYQ32Y.js": "bd6b0f6c8b27cc946acd8bd152c5d224ec11ab66",
+    "/my-app/chunk-JCJIXIGU.js": "9a8cc2c45b553808a1415121e44d96aeb0824e64",
+    "/my-app/chunk-K7HSCCCA.js": "1731d1a741550685b5d83b2b3944615e3ef60905",
+    "/my-app/chunk-KFFK6TCG.js": "b8810bb69332aca9470feaaaacf3d0a661ebc79d",
+    "/my-app/chunk-KPN76AHS.js": "8a422cc930508ff7f8cb8c61456f8b9587e434b5",
+    "/my-app/chunk-ODN5LVDJ.js": "626a459409709868c6f2a3483b3f521d513887da",
+    "/my-app/chunk-RECFE55V.js": "05375df3b9deddfa8be5f36fe1d4fd10520c8ffa",
+    "/my-app/chunk-WRXNKQBO.js": "85107c7d4e1d6b90fb9abe62507ba5f97c5c89a8",
     "/my-app/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
     "/my-app/flower.jpg": "892531adee1be46ad434cee0aaf4fddc00ba924d",
-    "/my-app/index.html": "b3639c5e4128ce729ed56854d43920191e536d2e",
-    "/my-app/main-UJGKG66L.js": "967c249ca18f31f2457b8896b299800c0b187dd3",
-    "/my-app/polyfills-L6DET5H6.js": "f60a7a99f6d5192fc786ac7973076b197f5023f7",
+    "/my-app/index.html": "c92a60770f87ec6aebb9e9b689e7397d118d43a2",
+    "/my-app/main-LAPG4GKK.js": "8521c134f4fd7ac20065ae8d860544b212664d97",
+    "/my-app/polyfills-RLN3BNOD.js": "0830e466d316256dbcdfd19eb7dfa1faf803df47",
     "/my-app/scripts-WB34LQOM.js": "712c822823abf00a602c54311d57726cf57a293c",
-    "/my-app/styles-FC22YVH7.css": "0838dd5850bf14e1ac1d25bf3d4a81ecd8911c2a"
+    "/my-app/styles-QSVNA3Q6.css": "aeadfcbee3c63960c90e69682b9e294f392d7d52"
   },
   "navigationUrls": [
     {

@@ -53,12 +53,12 @@ itemsNavList = [
    url: '/items-price-list'
   }
 ]
-adminNavList = [
-  {
-    name: 'Users',
-    url: '/admin-users'
-  }
-];
+// adminNavList = [
+//   {
+//     name: 'Users',
+//     url: '/admin-users'
+//   }
+// ];
 
   private sideNavList:Subject<any> = new BehaviorSubject<any>([]);
 
@@ -76,9 +76,9 @@ adminNavList = [
     else if(url.toString().includes('bill')){
       this.sideNavList.next(this.billingNavList);
     }
-    else if(url.toString().includes('admin')){
-      this.sideNavList.next(this.adminNavList);
-    }
+    // else if(url.toString().includes('admin')){
+    //   this.sideNavList.next(this.adminNavList);
+    // }
     else{
       this.sideNavList.next([]);
     }

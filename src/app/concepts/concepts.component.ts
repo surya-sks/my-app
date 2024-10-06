@@ -48,6 +48,11 @@ export class ConceptsComponent {
     {
       title: 'Angular',
       contents:[
+        {
+          title: 'Generate Pdf',
+          content: '',
+          href: 'https://pspdfkit.com/blog/2024/how-to-generate-pdfs-using-angular/'
+        },
          {
           title: 'CLI command for creating \'.ts\' file in angular 6',
           content: '*ng g c validation --flat=true --inline-style=true --inline-template=true --skip-tests \
