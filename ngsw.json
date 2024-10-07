@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1728241000134,
+  "timestamp": 1728322654578,
   "index": "/my-app/index.csr.html",
   "assetGroups": [
     {
@@ -21,7 +21,7 @@
         "/my-app/chunk-WRXNKQBO.js",
         "/my-app/favicon.ico",
         "/my-app/index.html",
-        "/my-app/main-LAPG4GKK.js",
+        "/my-app/main-Y4WKUEBM.js",
         "/my-app/polyfills-RLN3BNOD.js",
         "/my-app/scripts-WB34LQOM.js",
         "/my-app/styles-QSVNA3Q6.css"
@@ -53,8 +53,8 @@
     "/my-app/chunk-WRXNKQBO.js": "85107c7d4e1d6b90fb9abe62507ba5f97c5c89a8",
     "/my-app/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
     "/my-app/flower.jpg": "892531adee1be46ad434cee0aaf4fddc00ba924d",
-    "/my-app/index.html": "c92a60770f87ec6aebb9e9b689e7397d118d43a2",
-    "/my-app/main-LAPG4GKK.js": "8521c134f4fd7ac20065ae8d860544b212664d97",
+    "/my-app/index.html": "1beb5ff2fb3f9bd7082eaab0b9f50c203ec50af4",
+    "/my-app/main-Y4WKUEBM.js": "92ff61befb0981d6faf9959addf4870f94e0ae1f",
     "/my-app/polyfills-RLN3BNOD.js": "0830e466d316256dbcdfd19eb7dfa1faf803df47",
     "/my-app/scripts-WB34LQOM.js": "712c822823abf00a602c54311d57726cf57a293c",
     "/my-app/styles-QSVNA3Q6.css": "aeadfcbee3c63960c90e69682b9e294f392d7d52"
