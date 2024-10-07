@@ -10,6 +10,7 @@ import {FormBuilder, FormGroup, ReactiveFormsModule} from '@angular/forms';
 import { ItemsService } from '../../services/items.service';
 import { cloneDeep } from 'lodash';
 import { PdfGeneratorComponent } from "../../common-components/pdf-generator/pdf-generator.component";
+import { BillingService } from '../../services/billing.service';
 
 @Component({
   selector: 'app-bill-generate',
@@ -20,12 +21,12 @@ import { PdfGeneratorComponent } from "../../common-components/pdf-generator/pdf
   styleUrl: './bill-generate.component.css'
 })
 export class BillGenerateComponent {
-  displayedColumns: string[] = ['itemName', 'unitPrice', 'qty', 'cost'];
+  displayedColumns: string[] = ['sNo','itemName', 'unitPrice', 'qty', 'cost'];
   itemForm: any;
   itemsList: any;
   transactions: any[] = [];
   pdfData: any[] = [];
-  pdfHeaders: string[] = ['Item Name', 'Unit Price in INR', 'Quantity', 'Cost in INR'];
+  pdfHeaders: string[] = ['S.NO','Item Name', 'Unit Price in INR', 'Quantity', 'Cost in INR'];
   //below formatter -> How to get numbers to Indian rupees format in web page like 10,000.00
   // formatter = new Intl.NumberFormat('en-IN', {
   //   style: 'currency',
@@ -33,7 +34,9 @@ export class BillGenerateComponent {
   //   minimumFractionDigits: 2,
   // });
 
-  constructor(private formBuilder: FormBuilder, private itemsService : ItemsService){}
+  constructor(private formBuilder: FormBuilder, private itemsService : ItemsService,
+    private billingService : BillingService
+  ){}
   
   ngOnInit(){
     this.itemForm = this.formBuilder.group({
@@ -58,21 +61,31 @@ export class BillGenerateComponent {
     /////////////////pdf related contents begins here///////////////////
     let pdfTrans = cloneDeep(this.transactions);
     this.pdfData = [];
+    let i = 0;
+    let Qty = 0;
     for (const value of Object.values(pdfTrans)) {
       eachTransData = [];
       const entries = Object.entries(value);
       const lastKey = entries[entries.length - 1][0];
-      
+      i++;
+      eachTransData.push(i);
       for (let v in value) {
         // if(v == 'unitPrice' || v=='cost'){
         //   value[v] = this.formatter.format(value[v]);
         // }
+        if(v == 'qty'){
+          Qty += Number(value[v]);
+        }
         eachTransData.push(value[v]);
         if(v == lastKey){
            this.pdfData.push(eachTransData);
            if(pdfTrans[pdfTrans.length - 1] == value){
-            let total = ['Total','','',this.getTotalCost()]
-            this.pdfData.push(total);
+            let totalCost = ['Total Cost','','','',this.getTotalCost()]
+            this.pdfData.push(totalCost);
+            let totalQty = ['Total Qty','','',Qty,'']
+            this.pdfData.push(totalQty);
+            let totalItems = ['Total Items',pdfTrans.length,'','','']
+            this.pdfData.push(totalItems);
            }
         }
       }
@@ -81,6 +94,43 @@ export class BillGenerateComponent {
     this.getTotalCost();
     this.itemForm.reset();
   }
+
+  saveBill(){
+    //hardcoded begin
+    let bill ={
+      customerId : 1,
+      totalAmount: this.getTotalCost(),
+      date: new Date(),
+      paymentMethod: 'Cash',
+      status: 'Paid'
+    };
+    let billLineItemsArray = [];
+    let billLineItems ={
+      billId : 1,
+      productId: 1,
+      quantity: 1,
+      unitPrice: 12,
+      totalPrice: 23
+    };
+    //hardcoded begin
+    billLineItemsArray.push(billLineItems);
+    this.billingService.saveBill(bill).subscribe({
+      next: (billId => {
+        this.billingService.saveBillLineItems(billLineItemsArray).subscribe({
+          next: (billLineItem => {
+           //
+          }),
+          error: (err => {
+    // 
+          })
+        }); 
+      }),
+      error: (err => {
+    // 
+      })
+    });     
+  }
+
   itemFormChanged(form: any){
     this.itemForm.get("unitPrice").valueChanges.subscribe(() => {
       if(this.itemForm.get("qty").value){

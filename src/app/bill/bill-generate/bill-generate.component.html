@@ -32,19 +32,25 @@
     <button mat-raised-button (click)="addData()" class="button">
       Add Item
     </button>
-    <!-- <button mat-raised-button (click)="addData()" class="button" [disabled]="transactions.length ? false : true"> -->
-      <!-- Generate Bill -->
-      <app-pdf-generator class="button-padding" [headers]="pdfHeaders" [data]="pdfData" [isDisable]="transactions.length ? false : true"></app-pdf-generator>
-    <!-- </button> -->
+    <button mat-raised-button (click)="saveBill();pdfGenerator.generatePDF()" class="button" [disabled]="transactions.length ? false : true">
+      Save & Generate Bill
+    </button>
+    <app-pdf-generator #pdfGenerator class="button-padding" [headers]="pdfHeaders" [data]="pdfData" [isDisable]="transactions.length ? false : true"></app-pdf-generator>
 </div>
 
 <div class="table-container" *ngIf="transactions.length">
   <table mat-table [dataSource]="transactions" class="mat-elevation-z8">
+      <!-- S.NO Column -->
+      <ng-container matColumnDef="sNo">  
+        <th mat-header-cell *matHeaderCellDef> S.NO </th>
+        <td mat-cell *matCellDef="let transaction; let i = index"> {{i + 1}} </td>
+        <td mat-footer-cell *matFooterCellDef> Total </td>
+      </ng-container>
     <!-- Item Column -->
     <ng-container matColumnDef="itemName">  
       <th mat-header-cell *matHeaderCellDef> Item </th>
       <td mat-cell *matCellDef="let transaction"> {{transaction.itemName}} </td>
-      <td mat-footer-cell *matFooterCellDef> Total </td>
+      <td mat-footer-cell *matFooterCellDef> </td>
     </ng-container>
 
     <!-- Unit Price Column -->

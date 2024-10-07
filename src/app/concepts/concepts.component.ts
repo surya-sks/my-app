@@ -155,6 +155,15 @@ export class ConceptsComponent {
       ]
     },
     {
+      title: 'Java',
+      content: '@Entity: Marks the class as a JPA entity, which corresponds to a table in the database. \
+      \n@Id: Specifies the primary key of the entity. \
+      \n@GeneratedValue: Indicates that the value for the primary key will be generated automatically. \
+      \n@OneToMany: In the Customer entity, it defines a one-to-many relationship with Order. The mappedBy attribute specifies that the customer field in the Order entity owns the relationship. \
+      \n@ManyToOne: In the Order entity, it defines a many-to-one relationship with Customer. Multiple orders can be associated with a single customer. \
+      \n@JoinColumn: Specifies the foreign key column in the Order table that refers to the Customer table. The name attribute sets the column name (in this case, customer_id), and nullable = false ensures that every order must be associated with a customer.'
+    },
+    {
       title: 'JS',
       contents:[
         //  {
@@ -262,5 +271,30 @@ export class ConceptsComponent {
 // INSERT INTO items_fruit_list (fru_name) 
 // VALUES
 // ('Apple'),('Orange'),('Mosambi'),('Banana Eelaki'),('Banana Thaen'),('Banana Red'),
-// ('Grapes Black'),('Grapes Green'),('Mango'),('pomegranate'),('Lemon'),('Custard Apple'),('Pineapple'),('Watermelon'),
+// ('Grapes Black'),('Grapes Green'),('Mango'),('Pomegranate'),('Lemon'),('Custard Apple'),('Pineapple'),('Watermelon'),
 // ('Papaya')
+
+
+
+
+
+
+// CREATE TABLE railway.billLineItems (
+//   LineItemID INT PRIMARY KEY AUTO_INCREMENT,
+//   BillID INT,  -- Foreign key referencing Bills
+//   ProductID INT,  -- Foreign key if you have a Products table
+//   Quantity INT,
+//   UnitPrice DECIMAL(10, 2),
+//   TotalPrice DECIMAL(10, 2),  -- Quantity * UnitPrice
+//   FOREIGN KEY (BillID) REFERENCES bills(BillID)
+// );
+
+// CREATE TABLE railway.bills (
+//   BillID INT PRIMARY KEY AUTO_INCREMENT,
+//   CustomerID INT,  -- Foreign key if you have a Customers table
+//   TotalAmount DECIMAL(10, 2),
+//   Date DATETIME,
+//   PaymentMethod VARCHAR(50),  -- e.g., Cash, Credit Card
+//   Status VARCHAR(20)  -- e.g., Paid, Pending
+// );
+

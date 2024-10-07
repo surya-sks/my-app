@@ -39,8 +39,6 @@ export class PdfGeneratorComponent {
 		// ];
 		const headers = [this.headers];
 		const data = this.data;
-    console.log('this.headers',this.headers);
-    console.log('this.data',this.data);
 		autoTable(doc, {
 			head: headers,
 			body: data,

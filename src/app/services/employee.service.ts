@@ -33,7 +33,6 @@ export class EmployeeService {
   })
   }
   async saveEmpAbsenceHistory(empAbsenceDetails: any){
-    console.log('111 empAbsenceDetails',empAbsenceDetails);
     let url = this.apiUrl + 'employees/saveEmpAbsenceHistory';
     const headers={headers: new HttpHeaders({'Content-Type': 'application/json'})}
     this.http.post<any>(url, JSON.stringify(empAbsenceDetails),  headers ).subscribe(data => {
